@@ -1,4 +1,4 @@
-# Követelmény specifikáció
+# <p align="center">Követelmény Specifikáció</p>
 
 ## 1. Áttekintés
 
