@@ -13,7 +13,7 @@
 
 ## 3. Vágyálomrendszer
 
-<p align="justify">Csapatunk egy olyan alkalmazást szeretne készíteni, ami a legfrissebb tőzsdei adatokat kérné le egy adott ticker alapján a felhasználók részére. Célunk egy felhaszáló barát és letisztult alkalmazást készíteni, hogy minél kényelmesebb legyen a tőzsdei folyamatok követése. Az alkalmazás nem csak egyes adatokat kér le a tőzsdéről, hanem a lehető legfontosabb adatokat, illetve azokat amire a felhasználónak szüksége lehet. Az alkalmazás tájékoztatná a felhasználót a legutóbbi frissítésről, illetve az alkalmazásban használható funkcióiról (érvénytelen ticker beírásakor feldobja az elérhető ticker-ek listáját, és feldobja az újra begépelés lehetőségét is).</p>
+<p align="justify">Csapatunk egy olyan alkalmazást szeretne készíteni, ami a legfrissebb tőzsdei adatokat kérné le egy adott ticker alapján a felhasználók részére. Célunk egy felhaszálóbarát és letisztult alkalmazás készítése, hogy minél kényelmesebb legyen a tőzsdei folyamatok követése. Az alkalmazás tickerenként a fontosabb pénzügyi mutatókat tenné elérhetővé a felhasználó számára, és azon értékelő műveleteket hajtana végre. Hivatalos dokumentáció is elérhető lenne a felületen keresztül. Továbbá a rendszer tárolná az előző információkat a könnyebb jövőbeli elérhetőség érdekében.</p>
 
 
 ## 4. Jelenlegi üzleti folyamatok modellje
