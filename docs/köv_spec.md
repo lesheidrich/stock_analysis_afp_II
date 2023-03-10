@@ -40,3 +40,12 @@
 </ul>
 </p>
 
+
+## 6. Követelménylista
+
+<p align="justify"></p>
+
+
+## 7. Fogalomtár
+
+<p align="justify"></p>
