@@ -14,8 +14,6 @@ Csapatunk büszkén állt a feladat elé. Nálunk okosabb csapatokkal konzultál
 
 ## 2. A jelenlegi helyzet leírása
 
-Megrendelőnk, Warren Buffet, öregszik. Remeg a keze néha, nehéz neki begépelni a túlnagyított Chrome alkalmazásba egyenként az áhított pénzügyi információkat. OCD-je révén ezt napi többször meg kell tennie.
-<br>
-Továbbá feledékeny, így újra és újra ki kell keresse ezt az információt. Ez óriási bandwith-t igényel. A nagy embernek rengeteg ideje elmegy így fölöslegesen. Továbbá meg van győződve, hogy figyelik. Így szüksége lenne arra, hogy lássa milyen pénzügyi információ volt kikeresve a rendszerből eddig.
-<br>
-Egy biztonságos rendszerre lenne szüksége, ahol előző információkat meg lehet jeleníteni. 
+A Berkshire Hathaway tevékenységi köréből adódóan, fontos, hogy naprakészen nyomon követhesse a tőzsde változását és a világpiac alakulását, hogy a munkájukat hatékonyan tudják végezni. A jelenlegi cégen belül használt keresési és nyomon követési módszereket nem tartják elég gyorsnak és hatékonynak. Ennek legnagyobb háránya, hogy a módszer megköveteli az adatok hosszas keresését, a változások nehézkes nyomonkövetését és az adatok papír alapú cseréjét. Mindez negatív hatással van a cég hatékonyságára és az alkalmazottak munkavégzésére.
+
+
