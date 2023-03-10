@@ -18,7 +18,10 @@ A Berkshire Hathaway tevékenységi köréből adódóan, fontos, hogy naprakés
 
 
 ## 4. Jelenlegi üzleti folyamatok modellje
-Az információgyűjtés egy összetett, bonyodalmas és időigényes manuális folyamat. Ezt jó menedzsmenttel és delegációval kezelte eddig ügyfelünk, azonban ez jelentősen megnövelte létszámukat és költségvetésüket. Továbbá tapasztalatuk szerint, a létszám bővülésével nem növekszik azonos mennyiségben a csoporton belüli hatékonyság. Amint az alábbi diagram mutatja, a kutató csoport feladata több eszköz segítségével beszerezni a ticker-el kapcsolatos információt. Ezek után a dokumentációs csapat ezt feldolgozza, az információ így a fizikai adatállományukba kerül. Az értékelő csoport a fizikai adatállományban szereplő információt használja a menedzsment számára készített reportokhoz és befektetési stratégiákhoz.
+Az információgyűjtés egy összetett, bonyodalmas és időigényes manuális folyamat. Ezt jó menedzsmenttel és delegációval kezelte eddig ügyfelünk, azonban ez jelentősen megnövelte létszámukat és költségvetésüket. Továbbá tapasztalatuk szerint, a létszám bővülésével nem növekszik azonos mennyiségben a csoporton belüli hatékonyság. 
+<br>
+Amint az alábbi diagram mutatja, a kutató csoport feladata több eszköz segítségével beszerezni a ticker-el kapcsolatos információt. Ezek után a dokumentációs csapat ezt feldolgozza, az információ így a fizikai adatállományukba kerül. Az értékelő csoport a fizikai adatállományban szereplő információt használja a menedzsment számára készített reportokhoz és befektetési stratégiákhoz.
+<br>
 <img src="https://raw.githubusercontent.com/lesheidrich/stock_analysis_afp_II/main/img/docs/kov_spec_jelenlegi_uzleti_folyamatok.jpg" alt="jelenlegi üzleti folyamatok diagram">
 
 ## 5. Igényelt üzleti folyamatok modellje
