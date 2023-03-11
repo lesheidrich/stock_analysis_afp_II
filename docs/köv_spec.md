@@ -42,6 +42,10 @@
 </ul>
 </p>
 
+<img width=100%
+     src="https://raw.githubusercontent.com/lesheidrich/stock_analysis_afp_II/main/img/docs/kov_spec_igenyelt_uzleti_foly.jpg" 
+     alt="igényelt üzleti folyamatok diagram">
+
 
 ## 6. Követelménylista
 
