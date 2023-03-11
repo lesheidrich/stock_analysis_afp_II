@@ -1,4 +1,4 @@
-# Funkcionális specifikáció
+# <p align="center">Funkcionális specifikáció</p>
 
 ## 1. Jelenlegi helyzet leírása
 
@@ -82,7 +82,7 @@
 | K1 | ... | ... |
 
 
-## 11 Fogalomszótár
+## 11. Fogalomszótár
 
 <p align="justify">
 <ul>
