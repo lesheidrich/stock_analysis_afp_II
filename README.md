@@ -24,8 +24,6 @@
 
 ## Folyamatábra
 
-<img
-     width=100%
+<img width=100%
      src="https://raw.githubusercontent.com/lesheidrich/stock_analysis_afp_II/main/img/docs/simplified_flow_chart.jpg" 
-     alt="egyszerűsített folyamatábra"
->
+     alt="egyszerűsített folyamatábra">
