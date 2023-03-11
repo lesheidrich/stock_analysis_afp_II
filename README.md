@@ -1,4 +1,4 @@
-# Részvény analízis applikáció
+# <p align="center">Részvény analízis applikáció</p>
 
 <p align="justify">
     A program az Eszterházy Károly Katolikus Egyetem Programtervező Informatikus BSC képzés Alkalmazások fejlesztése projekt labor II tárgyra lett létrehozva a SCRUM    
@@ -26,6 +26,6 @@
 
 <img
      width=100%
-     scr="https://raw.githubusercontent.com/lesheidrich/stock_analysis_afp_II/main/img/docs/simplified_flow_chart.jpg" 
+     src="https://raw.githubusercontent.com/lesheidrich/stock_analysis_afp_II/main/img/docs/simplified_flow_chart.jpg" 
      alt="egyszerűsített folyamatábra"
 >
