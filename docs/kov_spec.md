@@ -63,15 +63,12 @@
 
 <p align="justify">
 <ul>
+     <li><b>csv:</b> comma separated values, vesszővel elválasztott szöveg alapú táblázat.</li>
      <li><b>Pénzügyi mutató:</b> A pénzügyi mutató egy olyan szám vagy arány, amely a pénzügyi teljesítményt vagy pénzügyi egészséget jellemzi egy vállalat, szervezet 
             vagy egyéni személy esetében.</li>
      <li><b>Real-time:</b> Valós idejű, azonnali.</li>
      <li><b>SEC:</b> Securities and Exchange Commission, az Egyesült Államok kormányának független szerve amely a tőzsdén lévő cégeket felügyeli.</li>
      <li><b>Ticker:</b> A ticker kód egy részvény részvényjegyzéken használt azonosítója. Minden egyedi kód számokból, betűkből, vagy akár mindkettőből áll.</li> 
-     <li>csv</li>
-     <li></li>
-     <li></li>
-     <li></li>
 </ul>
 
 </p>
