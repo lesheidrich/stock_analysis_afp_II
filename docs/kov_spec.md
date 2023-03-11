@@ -54,4 +54,16 @@
 
 ## 7. Fogalomtár
 
-<p align="justify"></p>
+<p align="justify">
+<ul>
+     <li>**Ticker:** A ticker kód egy részvény részvényjegyzéken használt azonosítója. Minden egyedi kód számokból, betűkből, vagy akár mindkettőből áll.</li>
+     <li>**Pénzügyi mutató:** A pénzügyi mutató egy olyan szám vagy arány, amely a pénzügyi teljesítményt vagy pénzügyi egészséget jellemzi egy vállalat, szervezet vagy egyéni személy esetében.</li>
+     <li></li>
+     <li></li>
+     <li></li>
+     <li></li>
+     <li></li>
+     <li></li>
+</ul>
+
+</p>
