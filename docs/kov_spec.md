@@ -70,5 +70,4 @@
      <li><b>SEC:</b> Securities and Exchange Commission, az Egyesült Államok kormányának független szerve amely a tőzsdén lévő cégeket felügyeli.</li>
      <li><b>Ticker:</b> A ticker kód egy részvény részvényjegyzéken használt azonosítója. Minden egyedi kód számokból, betűkből, vagy akár mindkettőből áll.</li> 
 </ul>
-
 </p>
