@@ -56,8 +56,9 @@
 
 <p align="justify">
 <ul>
-     <li>**Ticker:** A ticker kód egy részvény részvényjegyzéken használt azonosítója. Minden egyedi kód számokból, betűkből, vagy akár mindkettőből áll.</li>
-     <li>**Pénzügyi mutató:** A pénzügyi mutató egy olyan szám vagy arány, amely a pénzügyi teljesítményt vagy pénzügyi egészséget jellemzi egy vállalat, szervezet vagy egyéni személy esetében.</li>
+     <li><b>Pénzügyi mutató:</b> A pénzügyi mutató egy olyan szám vagy arány, amely a pénzügyi teljesítményt vagy pénzügyi egészséget jellemzi egy vállalat, szervezet vagy egyéni személy esetében.</li>
+     <li><b>Ticker:</b> A ticker kód egy részvény részvényjegyzéken használt azonosítója. Minden egyedi kód számokból, betűkből, vagy akár mindkettőből áll.</li>
+
      <li></li>
      <li></li>
      <li></li>
