@@ -42,7 +42,14 @@
 
 ## 5. Követelménylista
 
-<p align="justify"></p>
+| Id | Modul | Név | Leírás |
+| :---: | --- | --- | --- |
+| K1 | GUI | Login | Az felhasználó a felületen keresztül fér hozzá a rendszerhez, és inicializálja az API kulcsot |
+| K2 | GUI | Főablak | Megjeleníti az FMP szerkesztősége által kiadott piaci híreket, üdvözlő információkat és keresési lehetőséget biztosít a felhasználónak. |
+| K3 | Funkció | Keresés | Ticker használatával rákereshet a felhasználó egy részvényre. A rendszer megjeleníti a főbb pénzügyi mutatókat ezek alapján javaslatot tesz, illetve SEC éves reportokhoz is hozzáférést biztosít |
+| K4 | Funkció | Mentés | A felhasználó csv formátumban lementheti az SEC reportokat. |
+| K5 | Funkció | Frissítés | Az adott ticker adatait frissíti az adatbázisban. |
+| K6 | Funkció | Utoljára megtekintett | Megjeleníti az utoljára megtekintett tickereket, a felhasznó usernévvel együtt. |
 
 
 ## 6. Használati esetek
