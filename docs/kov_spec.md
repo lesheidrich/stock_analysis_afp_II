@@ -60,7 +60,7 @@
             vagy egyéni személy esetében.</li>
      <li><b>Real-time:</b> Valós idejű, azonnali.</li>
      <li><b>Ticker:</b> A ticker kód egy részvény részvényjegyzéken használt azonosítója. Minden egyedi kód számokból, betűkből, vagy akár mindkettőből áll.</li>
-     <li></li>
+     <li><b>SEC:</b> Securities and Exchange Commission, az Egyesült Államok kormányának független szerve amely a tőzsdén lévő cégeket felügyeli.</li>
      <li></li>
      <li></li>
      <li></li>
