@@ -1,4 +1,4 @@
-# <p align="center">Részvény analízis applikáció</p>
+# <p align="center">Részvény Értékelő Applikáció</p>
 
 <p align="justify">
     A program az Eszterházy Károly Katolikus Egyetem Programtervező Informatikus BSC képzés Alkalmazások fejlesztése projekt labor II tárgyra lett létrehozva a SCRUM    
