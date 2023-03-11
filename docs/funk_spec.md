@@ -1,4 +1,4 @@
-# <p align="center">Funkcionális specifikáció</p>
+# <p align="center">Funkcionális Specifikáció</p>
 
 ## 1. Jelenlegi helyzet leírása
 
