@@ -3,14 +3,14 @@
 <p align="justify">
     A program az Eszterházy Károly Katolikus Egyetem Programtervező Informatikus BSC képzés Alkalmazások fejlesztése projekt labor II tárgyra lett létrehozva a SCRUM    
   módszertan alkalmazásával.
-  <br>
+  <br><br>
   Csapattagok:
   <ul> 
     <li><a href="https://github.com/20001024">20001024</a></li>
     <li><a href="https://github.com/CoGn151oN">CoGn151oN</a></li>
     <li><a href="https://github.com/demeviktor02">demeviktor02</a></li>
-    <li><a href="https://github.com/R1chard2001">R1chard2001</a>(SCRUM master)</li>
-    <li><a href="https://github.com/szidebi02">szidebi02 </a></li>
+    <li><a href="https://github.com/R1chard2001">R1chard2001 </a>(SCRUM master)</li>
+    <li><a href="https://github.com/szidebi02">szidebi02</a></li>
   </ul>
 </p>
 
