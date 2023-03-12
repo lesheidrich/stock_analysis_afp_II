@@ -54,7 +54,15 @@
 
 ## 6. Használati esetek
 
-<p align="justify"></p>
+<p align="justify">
+<ul>
+  <li>Bejelentkezés</li>
+  <li>Keresés ticker-ek alapján</li>
+  <li>Adatok letöltése</li>
+  <li>Keresések visszanézése</li>
+  <li>Frissítés</li>
+</ul>
+</p>
 
 
 ## 7. Megfeleltetés, hogyan fedik le a használati eseteket a követelményeket
