@@ -83,7 +83,11 @@
 
 ## 9. Forgatókönyvek
 
-<p align="justify"></p>
+<p align="justify">Minden felhasználónak a program elindulása után egy bejelentkező felület jelenik meg. Amennyiben még nem regisztrált felhasználó, úgy ezen a felületen a regisztrálj gombra kattintva regisztrálhat is. Sikeres bejelentkezést követően pedig a főoldal jelenik meg.
+
+A főoldalon található egy szövegdoboz, amibe ha beírjuk a keresendő tickert, akkor azt követően megjelennek a részvény adatok és információk. A ticker beírásakor ügyeljünk arra hogy helyesen írjuk azt be, mivel ha elgépeljük, úgy nem megfelelő eredményeket vagy hibaüzenetet kapunk vissza.
+
+Miután megtaláltuk a keresett részvényt, elolvashatjuk annak adatait és a javaslatokat, reportokat. A felhasználónak lehetősége nyílik arra hogy frissítse az adott ticker adatait az adatbázisban. Illetve lehetősége van lementeni a SEC repotokat egy CSV fáljba.</p>
 
 
 
