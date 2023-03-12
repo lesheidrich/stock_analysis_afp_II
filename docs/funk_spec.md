@@ -67,7 +67,13 @@
 
 ## 7. Megfeleltetés, hogyan fedik le a használati eseteket a követelményeket
 
-<p align="justify"></p>
+| Használati eset | Megfeleltetése |
+| :---: | --- |
+| Bejelentkezés | A felhasználó a kliens oldal segítségével hozzáférhet a rendszerhez. |
+| Keresés | A felhasználó ticker alapján kereshet rá a részvényre. Emellett megjelennek a főbb pénzügyi mutatók és javaslatok. Illetve a SEC éves reportjaihoz is hozzáférést kap.|
+| Letöltés | A felhasználó csv formátumban lementheti a SEC reportokat. |
+| Keresések visszanézése | A felhasználó könnyedén visszanézheti a legutoljára megtekintett tickereket, illetve a felhasználó usernevét is. |
+| Frissítés | A felhasználó frissítheti az adott ticker adatait az adatbázisban. |
 
 
 ## 8. Képernyőtervek
