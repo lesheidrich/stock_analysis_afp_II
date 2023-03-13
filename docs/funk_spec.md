@@ -55,13 +55,12 @@
 ## 6. Használati esetek
 
 <p align="justify">
-<ul>
-  <li>Bejelentkezés</li>
-  <li>Keresés ticker-ek alapján</li>
-  <li>Adatok letöltése</li>
-  <li>Keresések visszanézése</li>
-  <li>Frissítés</li>
-</ul>
+
+  * **Bejelentkezés:** A felhasználó egy felhasználónév és jelszó megadása után továbbléphet a főoldalra.
+  * **Keresés ticker-ek alapján:** A főoldalon megtalálható szövegdobozba egy adott tickert begépelve rákereshet a részvényre és annak adataira, illetve azzal kapcsolatos további javaslatokra, reportokra.
+  * **Adatok letöltése:** A felhasználónak lehetősége van a letöltés gomb megnyomása után lementeni a SEC reportokat csv formátumban.
+  * **Keresések visszanézése:** A felhasználónak lehetősége van a visszatekintés gombra kattintva megtekinteni, hogy más felhasználók milyen részvényekre kerestek rá korábban.
+  * **Frissítés:** Egy frissítés gomb által lehetősége van a felhasználónak frissíteni a részvény adatait az adatbázisban.
 </p>
 
 
