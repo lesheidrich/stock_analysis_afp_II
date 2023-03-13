@@ -42,6 +42,23 @@
 
 ### 3.2 Üzleti folyamatok
 
+<p>Ügyfélünk úgy döntött, hogy kissebb specializált csapatokat és könnyen szemmel követhető folyamatok kiépítésével javíthatják teljesítményüket. Ezt tovább szeretnék fokozni technológiai újításokkal.</p>
+
+<p>A megrendelői elvárás alapját képezi egy olyan alkalmazás, amely:
+<ul>
+  <li>fő szolgáltatójuk, az FMP szolgáltatásait elérhetővé teszik saját rendszerükön keresztül</li>
+  <li>real-time adatokat tud lekérni a tőzsdéről egy adott ticker alapján</li>
+  <li>adott tickerek éves színtű pénzügyi mutatóihoz és dokumentumaihoz hozzáférést tesz lehetővé saját rendszeren keresztül is</li>
+  <li>kereskedési javaslatokat tesz pénzügyi mutatók alapján</li>
+  <li>bejelentkezési lehetőséget biztosít</li>
+  <li>lehetőséget ad más felhasználók által megtekintett tickereket is visszanézni</li>
+</ul>
+</p>
+
+<img width=100%
+     src="https://raw.githubusercontent.com/lesheidrich/stock_analysis_afp_II/main/img/docs/kov_spec_igenyelt_uzleti_foly.jpg" 
+     alt="igényelt üzleti folyamatok diagram">
+
 ## 4. Követelmények
 
 ### Funkcionális követelmények
