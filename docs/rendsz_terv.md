@@ -66,16 +66,22 @@
 ### Funkcionális követelmények
 
 | ID | Megnevezés | Leírás |
-| --- | --- | --- |
-| K1 | ... | ... |
+| :---: | --- | --- |
+| K1 | Bejelentkezés | A felhasználó a kliens oldal segítségével hozzáférhet a rendszerhez. |
+| K2 | Keresés | A felhasználó ticker alapján kereshet rá a részvényre. Emellett megjelennek a főbb pénzügyi mutatók és javaslatok. Illetve a SEC éves reportjaihoz is hozzáférést kap.|
+| K3 | Letöltés | A felhasználó csv formátumban lementheti a SEC reportokat. |
+| K4 | Keresések visszanézése | A felhasználó könnyedén visszanézheti a legutoljára megtekintett tickereket, illetve a felhasználó usernevét is. |
+| K5 | Frissítés | A felhasználó frissítheti az adott ticker adatait az adatbázisban. |
 
 ### Nemfunkcionális követelmények
 
 | ID | Megnevezés | Leírás |
 | --- | --- | --- |
-| K2 | ... | ... |
+| K6 | Letisztult megjelenés | A program megjelenése legyen könnyedén áttekinthető és letisztult. Törekedni kell az egyértelmű és kényelmes megoldásokra. |
+| K7 | Gyorsaság | Fontos, hogy az adatok frissítésénél és letöltésénél, illetve maga a program gyors működése a részvények gyors váltakozása miatt.|
 
 ### Támogatott eszközök
+<p align="justify">Python webszerver, illetve .NET Framework (csak olyan Windows rendszeren futtatható, amely rendelkezik a .NET Framework-el).</p>
 
 ## 5. Funkcionális terv
 
@@ -84,8 +90,6 @@
 <p>A rendszer a lokális kliens melett egy API-n keresztül kapcsólódik egy adatbázishoz ahonnan folyamatosan adatokat kér le, így a program internetre kapcsolódás nélkül nem működik. Kétféle jogosultsági kör létezik, admin és felhasználó (user). Ezek jogai között, különböző funkciók elérésénél különbséget teszünk</p>
 
 ### 5.2 Menühierarchiák
-
-<p>A szoftver egy egymásra épülő menürendszert tartalmaz. Az indításkor a felhasználót egy regisztrációs/bejelentkező menü fogadja. A regisztrációs/bejelentkezési lépések elvégzése után a főmenübe kerül a felhasználó. Innen a keresési funkció használatával érhetők el a felhasználó számára érdekelt tőzdei és pénzügyi mutatók, ahol a számára fontos folyamatokat a program segítségével elvégezheti.</p>
 
 ## 6. Fizikai környezet
 
@@ -110,8 +114,6 @@
 ## 10. Implementációs terv
 
 ## 11. Tesztterv
-
-<p>A tesztelések célja a teljes rendszer beleértve a kliens, az Api és az adatbázis funkcionalitásának teljes vizsgálata és ellenőrzése a rendszer által megvalósított üzleti szolgáltatások verifikálása. A teszteléseket a fejlesztő cspat tagjai mind elvégzik. Egymás tesztjeit sorra saját maguk is elvégzik és felülvizsgálják. A teszt eredményeit a tagok külön fájlokba dokumentálják</p>
 
 ### Tesztesetek
 
