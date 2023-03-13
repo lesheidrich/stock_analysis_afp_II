@@ -133,6 +133,7 @@ például. Teszt #01 | Regisztráció | A felhasználó az adatok megadásával 
 ... | ... | ... | ... | ...
 
 ## 12. Telepítési terv
+<p align="justify">A szoftver telepítéséhez szükségünk van egy 32 bites Windows rendszerű számítógépre, illetve szükségünk van kialakítani egy megfelelő adatbázist a webszerverhez, ezáltal internetre is szükségünk lesz.</p>
 
 ## 13. Karbantartási terv
 <p align="justify">Fontos ellenőrizni:</p>
