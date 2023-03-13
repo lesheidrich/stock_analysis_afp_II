@@ -127,3 +127,15 @@ például. Teszt #01 | Regisztráció | A felhasználó az adatok megadásával 
 ## 12. Telepítési terv
 
 ## 13. Karbantartási terv
+<p align="justify">Fontos ellenőrizni:</p>
+<p>
+<ul>
+  <li>Az adatok frissülnek az adatbázisban</li>
+  <li>A program nem lassul be</li>
+  <li>A bejelentkezés és regisztráció jól működik</li>
+  <li>A dokumentumok jól töltődnek le</li>
+  <li>Kinézet és jó megjelenítés</li>
+</ul>
+
+Illetve figyelembe kell venni a felhasználók által kapott visszajelzéseket. Ha valamilyen hibát talál, azt mielőbb ki kell javítani. 
+</p>
