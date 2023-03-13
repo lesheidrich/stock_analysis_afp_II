@@ -111,6 +111,8 @@
 
 ## 11. Tesztterv
 
+<p>A tesztelések célja a teljes rendszer beleértve a kliens, az Api és az adatbázis funkcionalitásának teljes vizsgálata és ellenőrzése a rendszer által megvalósított üzleti szolgáltatások verifikálása. A teszteléseket a fejlesztő cspat tagjai mind elvégzik. Egymás tesztjeit sorra saját maguk is elvégzik és felülvizsgálják. A teszt eredményeit a tagok külön fájlokba dokumentálják</p>
+
 ### Tesztesetek
 
  | Teszteset | Elvárt eredmény | 
