@@ -81,6 +81,8 @@
 
 ### 5.1 Rendszerszereplők
 
+<p>A rendszer a lokális kliens melett egy API-n keresztül kapcsólódik egy adatbázishoz ahonnan folyamatosan adatokat kér le, így a program internetre kapcsolódás nélkül nem működik. Kétféle jogosultsági kör létezik, admin és felhasználó (user). Ezek jogai között, különböző funkciók elérésénél különbséget teszünk</p>
+
 ### 5.2 Menühierarchiák
 
 ## 6. Fizikai környezet
