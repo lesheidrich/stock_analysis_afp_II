@@ -40,7 +40,7 @@
 
 ### 3.1 Üzleti szereplők
 
-<p>A rendszert regisztráció után bárki használhatja. Akármelyik felhasználó aki elvégezte a regisztrációs lépéseket a szoftvert mindenféle korlátozás nélkül használhatja. Annak eldöntése, hogy a szoftver kinek az eszközére települ és ki használhatja azt a megrendelő vállalat dönti el</p>
+<p>A rendszert regisztráció után bárki használhatja. Akármelyik felhasználó aki elvégezte a regisztrációs lépéseket a szoftvert mindenféle korlátozás nélkül használhatja. Annak eldöntése, hogy a szoftver kinek az eszközére települ és ki használhatja azt a megrendelő vállalat dönti el.</p>
 
 ### 3.2 Üzleti folyamatok
 
