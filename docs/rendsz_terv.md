@@ -111,6 +111,11 @@
 
 ## 9. Adatbázis terv
 
+Az adatbázis az AFP API json válaszainak tükörképe. Az adatokat a business logic strukturálja tovább mielőtt REST szolgáltatással továbbküli a kliensnek.
+
+<img src="https://raw.githubusercontent.com/lesheidrich/stock_analysis_afp_II/main/img/docs/adatbazis_terv.jpg" alt="adatbázis terv diagram">
+
+
 ## 10. Implementációs terv
 
 ## 11. Tesztterv
