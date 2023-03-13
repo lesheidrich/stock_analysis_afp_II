@@ -85,6 +85,8 @@
 
 ### 5.2 Menühierarchiák
 
+<p>A szoftver egy egymásra épülő menürendszert tartalmaz. Az indításkor a felhasználót egy regisztrációs/bejelentkező menü fogadja. A regisztrációs/bejelentkezési lépések elvégzése után a főmenübe kerül a felhasználó. Innen a keresési funkció használatával érhetők el a felhasználó számára érdekelt tőzdei és pénzügyi mutatók, ahol a számára fontos folyamatokat a program segítségével elvégezheti.</p>
+
 ## 6. Fizikai környezet
 
 ### Vásárolt softwarekomponensek és külső rendszerek
