@@ -40,6 +40,8 @@
 
 ### 3.1 Üzleti szereplők
 
+<p>A rendszert regisztráció után bárki használhatja. Akármelyik felhasználó aki elvégezte a regisztrációs lépéseket a szoftvert mindenféle korlátozás nélkül használhatja. Annak eldöntése, hogy a szoftver kinek az eszközére települ és ki használhatja azt a megrendelő vállalat dönti el</p>
+
 ### 3.2 Üzleti folyamatok
 
 <p>Ügyfélünk úgy döntött, hogy kissebb specializált csapatokat és könnyen szemmel követhető folyamatok kiépítésével javíthatják teljesítményüket. Ezt tovább szeretnék fokozni technológiai újításokkal.</p>
