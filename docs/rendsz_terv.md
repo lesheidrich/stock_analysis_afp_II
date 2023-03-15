@@ -12,7 +12,15 @@
      
 ### 2.2 Projektmunkások és felelőségek:
    * Frontend:
+     - D. Tóth Gyula Bátor
+     - Deme Viktor
+     - Heidrich Lóránd
+     - Szilágyi Debóra
    * Backend:
+     - D. Tóth Gyula Bátor
+     - Deme Viktor
+     - Heidrich Lóránd
+     - Szilágyi Debóra
    * Tesztelés:
      - D. Tóth Gyula Bátor
      - Deme Viktor
@@ -29,12 +37,21 @@
 |Program                  |Képernyőtervek elkészítése              |         2 |             1 |                      1 |                1 |                   1 |
 |Program                  |Prototípus elkészítése                  |         3 |             8 |                      8 |                8 |                   8 |
 |Program                  |Alapfunkciók elkészítése                |         3 |             8 |                      8 |                8 |                   8 |
+|Program                  |GUI elkészítése                         |         3 |             8 |                      8 |                8 |                   8 |
+|Program                  |Adatbázisrendszer létrehozása           |         3 |             8 |                      8 |                8 |                   8 |
 |Program                  |Titkosítási funkciók elkészítése        |         3 |             8 |                      8 |                8 |                   8 |
 |Program                  |Fájlbaírás / Fájlból olvasás elkészítése|         3 |             8 |                      8 |                8 |                   8 |
 |Program                  |Tesztelés                               |         4 |             2 |                      2 |                2 |                   2 |
 
 ### 2.4 Mérföldkövek:
+   * Dokumentáció megírása
+   * Alapfunkciók elkészítése
+   * GUI elkészítése
+   * Adatbázisrendszer létrehozása
    * Prototípus átadása
+   * Tesztelés
+   * Esetleges hibák javítása
+   * Kész program átadása
 
 ## 3. Üzleti folyamatok modellje
 
