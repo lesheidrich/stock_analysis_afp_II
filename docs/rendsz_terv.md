@@ -104,9 +104,11 @@
 
 ### 5.1 Rendszerszereplők
 
-<p>A rendszer a lokális kliens melett egy API-n keresztül kapcsólódik egy adatbázishoz ahonnan folyamatosan adatokat kér le, így a program internetre kapcsolódás nélkül nem működik. Kétféle jogosultsági kör létezik, admin és felhasználó (user). Ezek jogai között, különböző funkciók elérésénél különbséget teszünk</p>
+<p>A rendszer a lokális kliens melett egy API-n keresztül kapcsólódik egy adatbázishoz ahonnan folyamatosan adatokat kér le, így a program internetre kapcsolódás nélkül nem működik. Kétféle jogosultsági kör létezik, admin és felhasználó (user). Ezek jogai között különböző funkciók elérésénél különbséget teszünk.</p>
 
 ### 5.2 Menühierarchiák
+
+<p>A szoftver egymásra épülő menürendszert tartalmaz. Az indításkor a felhasználót egy regisztrációs/bejelentkező menü fogadja. A regisztrációs/bejelentkezési lépések elvégzése után a főmenübe kerül a felhasználó. Itt megtalálja az input mezőt, a keresési funkció használatával érhető el a felhasználó számára érdekelt tickerhez kapcsolódó tőzdei és pénzügyi mutatók menüje. Ebben a menüpontban található a mentés, frissítés illetve az utoljára megtekintett tickerek megnézésének funkciója.</p>
 
 ## 6. Fizikai környezet
 
