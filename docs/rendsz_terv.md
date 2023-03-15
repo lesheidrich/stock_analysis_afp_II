@@ -149,11 +149,11 @@ Az adatbázis az AFP API json válaszainak tükörképe. Az adatokat a business 
 
  | Teszteset                                            | Elvárt eredmény | 
  |-----------                                           |-----------------| 
- | Helytelen regisztrációs adatok megadása              | A regisztráció sikertelen lesz, a program hibaüzeneted dob. |
+ | Helytelen regisztrációs adatok megadása              | A regisztráció sikertelen lesz, a program hibaüzenetet dob. |
  | Helyes regisztrációs adatok megadása                 | A regisztráció sikeres lesz, a felhasználó bekerül az adatbázisba. |
- | Helytelen/nem létező bejelentkezési adatok megadása  | A bejelentkezés sikertelen lesz, a program hibaüzeneted dob. |
+ | Helytelen/nem létező bejelentkezési adatok megadása  | A bejelentkezés sikertelen lesz, a program hibaüzenetet dob. |
  | Helyes/létező bejelentkezési adatok megadása         | A bejelentkezés sikeres lesz, a felhasználó a főmenübe kerül. |
- | Helytelen/nem létező ticker megadása                 | A keresés sikertelen lesz, a program hibaüzeneted dob, a felhasználó a főmenübeben marad. |
+ | Helytelen/nem létező ticker megadása                 | A keresés sikertelen lesz, a program hibaüzenetet dob, a felhasználó a főmenüben marad. |
  | Helyes/létező ticker megadása                        | A keresés sikeres lesz, a felhasználó megkapja az adott tickerhez tartozó világpiaci és pénzügyi mutatókat. |
  | Mentés funkció használata                            | A felhasználó csv formátumban megkapja az adott tickerhez tartozó világpiaci és pénzügyi mutatókat. |
  | Frissítés funkció használata                         | Az adott ticker adatai frissülnek az adatbázisban. |
