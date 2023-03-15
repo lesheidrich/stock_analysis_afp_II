@@ -139,11 +139,22 @@ Az adatbázis az AFP API json válaszainak tükörképe. Az adatokat a business 
 
 ## 11. Tesztterv
 
+<p>A tesztelések célja a teljes rendszer beleértve a kliens, az API és az adatbázis funkcionalitásának teljes vizsgálata és ellenőrzése a rendszer által megvalósított üzleti szolgáltatások verifikálása. A teszteléseket a fejlesztő csapat tagjai mind elvégzik. Egymás tesztjeit sorra saját maguk is végrehajtják és felülvizsgálják. A teszt eredményeit a tagok külön fájlokba dokumentálják.</p>
+
 ### Tesztesetek
 
- | Teszteset | Elvárt eredmény | 
- |-----------|-----------------| 
- | ... | ... |
+ | Teszteset                                            | Elvárt eredmény | 
+ |-----------                                           |-----------------| 
+ | Helytelen regisztrációs adatok megadása              | A regisztráció sikertelen lesz, a program hibaüzeneted dob. |
+ | Helyes regisztrációs adatok megadása                 | A regisztráció sikeres lesz, a felhasználó bekerül az adatbázisba. |
+ | Helytelen/nem létező bejelentkezési adatok megadása  | A bejelentkezés sikertelen lesz, a program hibaüzeneted dob. |
+ | Helyes/létező bejelentkezési adatok megadása         | A bejelentkezés sikeres lesz, a felhasználó a főmenübe kerül. |
+ | Helytelen/nem létező ticker megadása                 | A keresés sikertelen lesz, a program hibaüzeneted dob, a felhasználó a főmenübeben marad. |
+ | Helyes/létező ticker megadása                        | A keresés sikeres lesz, a felhasználó megkapja az adott tickerhez tartozó világpiaci és pénzügyi mutatókat. |
+ | Mentés funkció használata                            | A felhasználó csv formátumban megkapja az adott tickerhez tartozó világpiaci és pénzügyi mutatókat. |
+ | Frissítés funkció használata                         | Az adott ticker adatai frissülnek az adatbázisban. |
+ | Utoljára megtekintett funkció használata             | Megjelennek az utoljára megtekintett tickereket, a felhasznó usernévvel együtt. |
+
 
 ### A tesztelési jegyzőkönyv kitöltésére egy sablon:
 
