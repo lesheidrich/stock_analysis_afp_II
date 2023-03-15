@@ -137,6 +137,10 @@ Az adatbázis az AFP API json válaszainak tükörképe. Az adatokat a business 
 
 ## 10. Implementációs terv
 
+  * Az alkalmazás a Financial Modeling Prep API-t használja az adatbázishoz való csatlakozáshoz, új információ lekéréséhez.
+  * A felhasználói felület, kliens GUI - C# window form alkalmazás.
+  * Python webszerver, illetve .NET Framework (csak olyan Windows rendszeren futtatható, amely rendelkezik a .NET Framework-el).
+
 ## 11. Tesztterv
 
 <p>A tesztelések célja a teljes rendszer beleértve a kliens, az API és az adatbázis funkcionalitásának teljes vizsgálata és ellenőrzése a rendszer által megvalósított üzleti szolgáltatások verifikálása. A teszteléseket a fejlesztő csapat tagjai mind elvégzik. Egymás tesztjeit sorra saját maguk is végrehajtják és felülvizsgálják. A teszt eredményeit a tagok külön fájlokba dokumentálják.</p>
