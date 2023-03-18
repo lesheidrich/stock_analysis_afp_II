@@ -113,12 +113,16 @@
 ## 6. Fizikai környezet
 
 ### Vásárolt softwarekomponensek és külső rendszerek
+<p>Nincsenek vásárolt szoftverkomponensek.</p>
 
 ### Hardver topológia
+<p>Az alkalmazásnak szüksége van internet elérésre. De ezen követelmény teljesülése mellett a 32 és 64 bites Windowson rendszereken egyaránt működik. Amennyiben az a windows rendszer rendelkezik .NET Frameworkkel.</p>
 
 ### Fizikai alrendszerek
+<p>Kliens gépek: Olyan gépek melyek képesek Windows futatására alkalmas és internetes hozzáféréssel rendelkeznek.</p>
 
 ### Fejlesztő eszközök
+<p> </p>
 
 ## 8. Architekturális terv
 
