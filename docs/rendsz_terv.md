@@ -1,5 +1,6 @@
 # Rendszerterv
 ## 1. A rendszer célja
+
 <p>Az alkalmazásunk infromálja a tőzsde után éredklődőket, de a már ebben jártasoknak is segítséget tudjon nyújtani. Felhasználóinknak egy egyszerű, de igényesen elrendezett felületet kínálunk melyen a belépést, vagy az új profil létrehozását megteheti. Ezt követően a felhasználó elolvashatja a híreket vagy ha egy kifejezett tőzsdei tickert. Itt megtekintheti a pénzügyi mutatókat, mentheti a számára fontos tickereket, vagy vissza nézheti a már megtekintetteket.</p>
 
 ## 2. Projektterv
@@ -114,24 +115,34 @@
 ## 6. Fizikai környezet
 
 ### Vásárolt softwarekomponensek és külső rendszerek
+
 <p>Nincsenek vásárolt szoftverkomponensek.</p>
 
 ### Hardver topológia
+
 <p>Az alkalmazásnak szüksége van internet elérésre. De ezen követelmény teljesülése mellett a 32 és 64 bites Windowson rendszereken egyaránt működik. Amennyiben az a Windows rendszer rendelkezik .NET Frameworkkel.</p>
 
 ### Fizikai alrendszerek
+
 <p>Kliens gépek: Olyan gépek melyek képesek Windows futatására alkalmas és internetes hozzáféréssel rendelkeznek.</p>
 
 ### Fejlesztő eszközök
+
 <p> Python, a webalkalmazás része főleg</p>
 
 ## 8. Architekturális terv
 
 ### Webszerver
 
+<p>Az alkalmazásunk folyamatos internet kapcsolatra van szüksége, mert a webszerverünkről hívja le a frissítéseket és kezeli a bejelentkezést.</p>
+
 ### Adatbázis rendszer
 
+<p>Az alkalmazásunk folyamatos internet kapcsolatra van szüksége, mert az adatbázishoz szükséges lesz a kapcsolódás.</p>
+
 ### A program elérése, kezelése
+
+<p>A programot Windows operációs rendszert futtató és .NET keretrendszerrel rendelkező számítógép futtathatja. A futtatás egyszerű, csak kétszer kell rákattintani az állománynak a parancsikonjára.</p>
 
 ## 9. Adatbázis terv
 
