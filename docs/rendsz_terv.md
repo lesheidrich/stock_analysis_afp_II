@@ -1,5 +1,6 @@
 # Rendszerterv
 ## 1. A rendszer célja
+<p>Az alkalmazásunk infromálja a tőzsde után éredklődőket, de a már ebben jártasoknak is segítséget tudjon nyújtani. Felhasználóinknak egy egyszerű, de igényesen elrendezett felületet kínálunk melyen a belépést, vagy az új profil létrehozását megteheti. Ezt követően a felhasználó elolvashatja a híreket vagy ha egy kifejezett tőzsdei tickert. Itt megtekintheti a pénzügyi mutatókat, mentheti a számára fontos tickereket, vagy vissza nézheti a már megtekintetteket.</p>
 
 ## 2. Projektterv
 
@@ -108,7 +109,7 @@
 
 ### 5.2 Menühierarchiák
 
-<p>A szoftver egymásra épülő menürendszert tartalmaz. Az indításkor a felhasználót egy regisztrációs/bejelentkező menü fogadja. A regisztrációs/bejelentkezési lépések elvégzése után a főmenübe kerül a felhasználó. Itt megtalálja az input mezőt, a keresési funkció használatával érhető el a felhasználó számára érdekelt tickerhez kapcsolódó tőzdei és pénzügyi mutatók menüje. Ebben a menüpontban található a mentés, frissítés illetve az utoljára megtekintett tickerek megnézésének funkciója.</p>
+<p>A szoftver egymásra épülő menürendszert tartalmaz. Az indításkor a felhasználót egy regisztrációs/bejelentkező menü fogadja. A regisztrációs/bejelentkezési lépések elvégzése után a főmenübe kerül a felhasználó. Itt megtalálja az input mezőt, a keresési funkció használatával érhető el a felhasználó számára érdekelt tickerhez kapcsolódó tőzsdei és pénzügyi mutatók menüje. Ebben a menüpontban található a mentés, frissítés illetve az utoljára megtekintett tickerek megnézésének funkciója.</p>
 
 ## 6. Fizikai környezet
 
@@ -116,13 +117,13 @@
 <p>Nincsenek vásárolt szoftverkomponensek.</p>
 
 ### Hardver topológia
-<p>Az alkalmazásnak szüksége van internet elérésre. De ezen követelmény teljesülése mellett a 32 és 64 bites Windowson rendszereken egyaránt működik. Amennyiben az a windows rendszer rendelkezik .NET Frameworkkel.</p>
+<p>Az alkalmazásnak szüksége van internet elérésre. De ezen követelmény teljesülése mellett a 32 és 64 bites Windowson rendszereken egyaránt működik. Amennyiben az a Windows rendszer rendelkezik .NET Frameworkkel.</p>
 
 ### Fizikai alrendszerek
 <p>Kliens gépek: Olyan gépek melyek képesek Windows futatására alkalmas és internetes hozzáféréssel rendelkeznek.</p>
 
 ### Fejlesztő eszközök
-<p> </p>
+<p> Python, a webalkalmazás része főleg</p>
 
 ## 8. Architekturális terv
 
