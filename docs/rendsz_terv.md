@@ -120,11 +120,12 @@
 
 ### Hardver topológia
 
-<p>Az alkalmazásnak szüksége van internet elérésre. De ezen követelmény teljesülése mellett a 32 és 64 bites Windowson rendszereken egyaránt működik. Amennyiben az a Windows rendszer rendelkezik .NET Frameworkkel.</p>
+<p>Kliens oldalon az alkalmazásnak szüksége van internet elérésre. De ezen követelmény teljesülése mellett a 32 és 64 bites Windowson rendszereken egyaránt működik. Amennyiben az a Windows rendszer rendelkezik .NET Frameworkkel. Szerver szempontjából python interpreter futatásához alkalmas szerver setup szükséges.</p>
 
 ### Fizikai alrendszerek
 
-<p>Kliens gépek: Olyan gépek melyek képesek Windows futatására alkalmas és internetes hozzáféréssel rendelkeznek.</p>
+<p>Kliens gépek: Olyan gépek melyek képesek Windows futatására alkalmas és internetes hozzáféréssel rendelkeznek.
+Szerver gépek: Olyan gépek amely internet hozzáféréssel rendelkezik.</p>
 
 ### Fejlesztő eszközök
 
