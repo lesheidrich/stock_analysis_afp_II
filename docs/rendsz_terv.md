@@ -136,11 +136,11 @@
 
 <p>Az alkalmazásunk folyamatos internet kapcsolatra van szüksége, mert a webszerverünkről hívja le a frissítéseket és kezeli a bejelentkezést.</p>
 
-### Adatbázis rendszer
+### Adatbázis rendszer (szerverhez)
 
 <p>Az alkalmazásunk folyamatos internet kapcsolatra van szüksége, mert az adatbázishoz szükséges lesz a kapcsolódás.</p>
 
-### A program elérése, kezelése
+### A program elérése, kezelése (kliens)
 
 <p>A programot Windows operációs rendszert futtató és .NET keretrendszerrel rendelkező számítógép futtathatja. A futtatás egyszerű, csak kétszer kell rákattintani az állománynak a parancsikonjára.</p>
 
