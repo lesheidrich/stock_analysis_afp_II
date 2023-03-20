@@ -191,7 +191,8 @@ például. Teszt #01 | Regisztráció | A felhasználó az adatok megadásával 
 ... | ... | ... | ... | ...
 
 ## 11. Telepítési terv
-<p align="justify">A szoftver telepítéséhez szükségünk van egy 32 bites Windows rendszerű számítógépre, illetve szükségünk van kialakítani egy megfelelő adatbázist a webszerverhez, ezáltal internetre is szükségünk lesz.</p>
+* **Szerver:** A működéséhez egy olyan eszközre van szükség, ami képes futtatni a Python és MYSQL szervert.
+* **Kliens:** A kliens futtatásához egy .NET Framework képes rendszerű PC-re van szükség.
 
 ## 12. Karbantartási terv
 <p align="justify">Fontos ellenőrizni:</p>
