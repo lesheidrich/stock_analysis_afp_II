@@ -31,6 +31,8 @@
 
 ## Dokumentáció
 
-<a ref="https://github.com/lesheidrich/stock_analysis_afp_II/blob/main/docs/funk_spec.md">Funkcionális specifikáció</a>
-<a ref="https://github.com/lesheidrich/stock_analysis_afp_II/blob/main/docs/kov_spec.md">Követelmény specifikáció</a>
-<a ref="https://github.com/lesheidrich/stock_analysis_afp_II/blob/main/docs/rendsz_terv.md">Rendszerterv</a>
+<ul>
+    <li><a href="https://github.com/lesheidrich/stock_analysis_afp_II/blob/main/docs/funk_spec.md">Funkcionális specifikáció</a></li>
+    <li><a href="https://github.com/lesheidrich/stock_analysis_afp_II/blob/main/docs/kov_spec.md">Követelmény specifikáció</a></li>
+    <li><a href="https://github.com/lesheidrich/stock_analysis_afp_II/blob/main/docs/rendsz_terv.md">Rendszerterv</a></li>
+<ul>
