@@ -146,18 +146,13 @@
 
 ### A program elérése, kezelése
 
-<<<<<<< HEAD
 <p>A programot Windows operációs rendszert futtató és .NET keretrendszerrel rendelkező számítógép futtathatja. A futtatás egyszerű, csak kétszer kell rákattintani az állománynak a parancsikonjára.</p>
 
-## 9. Adatbázis terv
-=======
 ## 8. Adatbázis terv
->>>>>>> main
 
 Az adatbázis az AFP API json válaszainak tükörképe. Az adatokat a business logic strukturálja tovább mielőtt REST szolgáltatással továbbküli a kliensnek.
 
 <img src="https://raw.githubusercontent.com/lesheidrich/stock_analysis_afp_II/main/img/docs/adatbazis_terv.jpg" alt="adatbázis terv diagram">
-
 
 ## 9. Implementációs terv
 
