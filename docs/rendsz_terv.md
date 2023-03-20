@@ -129,7 +129,7 @@ Szerver gépek: Olyan gépek amely internet hozzáféréssel rendelkezik.</p>
 
 ### Fejlesztő eszközök
 
-<p> Python, a webalkalmazás része főleg</p>
+<p> Python, a webalkalmazás része főleg. Visual studio cliens alkalmazás úgy szintén használva van.</p>
 
 ## 7. Architekturális terv
 
