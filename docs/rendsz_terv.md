@@ -128,9 +128,13 @@
 
 ### Fejlesztő eszközök
 
+<<<<<<< HEAD
 <p> Python, a webalkalmazás része főleg</p>
 
 ## 8. Architekturális terv
+=======
+## 7. Architekturális terv
+>>>>>>> main
 
 ### Webszerver
 
@@ -142,22 +146,26 @@
 
 ### A program elérése, kezelése
 
+<<<<<<< HEAD
 <p>A programot Windows operációs rendszert futtató és .NET keretrendszerrel rendelkező számítógép futtathatja. A futtatás egyszerű, csak kétszer kell rákattintani az állománynak a parancsikonjára.</p>
 
 ## 9. Adatbázis terv
+=======
+## 8. Adatbázis terv
+>>>>>>> main
 
 Az adatbázis az AFP API json válaszainak tükörképe. Az adatokat a business logic strukturálja tovább mielőtt REST szolgáltatással továbbküli a kliensnek.
 
 <img src="https://raw.githubusercontent.com/lesheidrich/stock_analysis_afp_II/main/img/docs/adatbazis_terv.jpg" alt="adatbázis terv diagram">
 
 
-## 10. Implementációs terv
+## 9. Implementációs terv
 
   * Az alkalmazás a Financial Modeling Prep API-t használja az adatbázishoz való csatlakozáshoz, új információ lekéréséhez.
   * A felhasználói felület, kliens GUI - C# window form alkalmazás.
   * Python webszerver, illetve .NET Framework (csak olyan Windows rendszeren futtatható, amely rendelkezik a .NET Framework-el).
 
-## 11. Tesztterv
+## 10. Tesztterv
 
 <p>A tesztelések célja a teljes rendszer beleértve a kliens, az API és az adatbázis funkcionalitásának teljes vizsgálata és ellenőrzése a rendszer által megvalósított üzleti szolgáltatások verifikálása. A teszteléseket a fejlesztő csapat tagjai mind elvégzik. Egymás tesztjeit sorra saját maguk is végrehajtják és felülvizsgálják. A teszt eredményeit a tagok külön fájlokba dokumentálják.</p>
 
@@ -187,10 +195,10 @@ Tesztszám | Rövid leírás | Várt eredmény | Eredmény | Megjegyzés
 például. Teszt #01 | Regisztráció | A felhasználó az adatok megadásával sikeresen regisztrálni tud  | A felhasználó sikeresen regisztrált | Nem találtam problémát.
 ... | ... | ... | ... | ...
 
-## 12. Telepítési terv
+## 11. Telepítési terv
 <p align="justify">A szoftver telepítéséhez szükségünk van egy 32 bites Windows rendszerű számítógépre, illetve szükségünk van kialakítani egy megfelelő adatbázist a webszerverhez, ezáltal internetre is szükségünk lesz.</p>
 
-## 13. Karbantartási terv
+## 12. Karbantartási terv
 <p align="justify">Fontos ellenőrizni:</p>
 <p>
 <ul>
