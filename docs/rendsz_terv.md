@@ -8,9 +8,9 @@
 ### 2.1 Projektszerepkörök, felelőségek:
    * Scrum masters:
      - Matuch Richárd
-   * Product owner: Teszt Elek
+   * Product owner: Dr. Tajti Tibor 
    * Üzleti szereplő:
-     - Megrendelő: Teszt Elek
+     - Megrendelő: Dr. Tajti Tibor
      
 ### 2.2 Projektmunkások és felelőségek:
    * Frontend:
