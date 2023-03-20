@@ -128,13 +128,9 @@
 
 ### Fejlesztő eszközök
 
-<<<<<<< HEAD
 <p> Python, a webalkalmazás része főleg</p>
 
-## 8. Architekturális terv
-=======
 ## 7. Architekturális terv
->>>>>>> main
 
 ### Webszerver
 
