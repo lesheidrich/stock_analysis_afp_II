@@ -34,10 +34,11 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.UserNamelbl = new System.Windows.Forms.Label();
+            this.Emaillbl = new System.Windows.Forms.Label();
+            this.Passwordlbl = new System.Windows.Forms.Label();
+            this.PasswordAgainlbl = new System.Windows.Forms.Label();
+            this.SignUpButtonlbl = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // SingUplbl
@@ -52,9 +53,9 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(386, 370);
+            this.button1.Location = new System.Drawing.Point(545, 381);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(75, 40);
             this.button1.TabIndex = 1;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
@@ -75,53 +76,67 @@
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(137, 312);
+            this.textBox3.Location = new System.Drawing.Point(137, 313);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(100, 20);
             this.textBox3.TabIndex = 4;
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(137, 361);
+            this.textBox4.Location = new System.Drawing.Point(178, 360);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(100, 20);
             this.textBox4.TabIndex = 5;
             // 
-            // label1
+            // UserNamelbl
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(55, 218);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "label1";
+            this.UserNamelbl.AutoSize = true;
+            this.UserNamelbl.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.UserNamelbl.Location = new System.Drawing.Point(28, 207);
+            this.UserNamelbl.Name = "UserNamelbl";
+            this.UserNamelbl.Size = new System.Drawing.Size(103, 25);
+            this.UserNamelbl.TabIndex = 6;
+            this.UserNamelbl.Text = "User name:";
             // 
-            // label2
+            // Emaillbl
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(58, 277);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "label2";
+            this.Emaillbl.AutoSize = true;
+            this.Emaillbl.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Emaillbl.Location = new System.Drawing.Point(28, 260);
+            this.Emaillbl.Name = "Emaillbl";
+            this.Emaillbl.Size = new System.Drawing.Size(66, 25);
+            this.Emaillbl.TabIndex = 10;
+            this.Emaillbl.Text = "E-mail:";
             // 
-            // label3
+            // Passwordlbl
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(58, 318);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 13);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "label3";
+            this.Passwordlbl.AutoSize = true;
+            this.Passwordlbl.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Passwordlbl.Location = new System.Drawing.Point(28, 307);
+            this.Passwordlbl.Name = "Passwordlbl";
+            this.Passwordlbl.Size = new System.Drawing.Size(95, 25);
+            this.Passwordlbl.TabIndex = 11;
+            this.Passwordlbl.Text = "Password:";
             // 
-            // label4
+            // PasswordAgainlbl
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(58, 370);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(35, 13);
-            this.label4.TabIndex = 9;
-            this.label4.Text = "label4";
+            this.PasswordAgainlbl.AutoSize = true;
+            this.PasswordAgainlbl.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.PasswordAgainlbl.Location = new System.Drawing.Point(28, 355);
+            this.PasswordAgainlbl.Name = "PasswordAgainlbl";
+            this.PasswordAgainlbl.Size = new System.Drawing.Size(144, 25);
+            this.PasswordAgainlbl.TabIndex = 12;
+            this.PasswordAgainlbl.Text = "Password again:";
+            // 
+            // SignUpButtonlbl
+            // 
+            this.SignUpButtonlbl.AutoSize = true;
+            this.SignUpButtonlbl.Font = new System.Drawing.Font("Arial", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.SignUpButtonlbl.Location = new System.Drawing.Point(400, 381);
+            this.SignUpButtonlbl.Name = "SignUpButtonlbl";
+            this.SignUpButtonlbl.Size = new System.Drawing.Size(139, 40);
+            this.SignUpButtonlbl.TabIndex = 13;
+            this.SignUpButtonlbl.Text = "Sign Up";
             // 
             // Register
             // 
@@ -129,10 +144,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Stock_analysis_client.Properties.Resources.BG;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.SignUpButtonlbl);
+            this.Controls.Add(this.PasswordAgainlbl);
+            this.Controls.Add(this.Passwordlbl);
+            this.Controls.Add(this.Emaillbl);
+            this.Controls.Add(this.UserNamelbl);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
@@ -154,9 +170,10 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label UserNamelbl;
+        private System.Windows.Forms.Label Emaillbl;
+        private System.Windows.Forms.Label Passwordlbl;
+        private System.Windows.Forms.Label PasswordAgainlbl;
+        private System.Windows.Forms.Label SignUpButtonlbl;
     }
 }
