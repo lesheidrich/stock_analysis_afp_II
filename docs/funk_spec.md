@@ -76,9 +76,14 @@
 
 
 ## 8. Képernyőtervek
-
-<p align="justify"></p>
-
+Login
+<img src="https://github.com/lesheidrich/stock_analysis_afp_II/blob/main/docs/Pictures/Dia1.JPG?raw=true">
+Sign up
+<img src="https://github.com/lesheidrich/stock_analysis_afp_II/blob/main/docs/Pictures/Dia2.JPG?raw=true">
+Főablak
+<img src="https://github.com/lesheidrich/stock_analysis_afp_II/blob/main/docs/Pictures/Dia3.JPG?raw=true">
+Információs ablak
+<img src="https://github.com/lesheidrich/stock_analysis_afp_II/blob/main/docs/Pictures/Dia4.JPG?raw=true">
 
 ## 9. Forgatókönyvek
 
