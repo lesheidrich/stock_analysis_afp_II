@@ -1,14 +1,16 @@
 # Rendszerterv
 ## 1. A rendszer célja
 
+<p>Az alkalmazásunk infromálja a tőzsde után éredklődőket, de a már ebben jártasoknak is segítséget tudjon nyújtani. Felhasználóinknak egy egyszerű, de igényesen elrendezett felületet kínálunk melyen a belépést, vagy az új profil létrehozását megteheti. Ezt követően a felhasználó elolvashatja a híreket vagy ha egy kifejezett tőzsdei tickert. Itt megtekintheti a pénzügyi mutatókat, mentheti a számára fontos tickereket, vagy vissza nézheti a már megtekintetteket.</p>
+
 ## 2. Projektterv
 
 ### 2.1 Projektszerepkörök, felelőségek:
    * Scrum masters:
      - Matuch Richárd
-   * Product owner: Teszt Elek
+   * Product owner: Dr. Tajti Tibor 
    * Üzleti szereplő:
-     - Megrendelő: Teszt Elek
+     - Megrendelő: Dr. Tajti Tibor
      
 ### 2.2 Projektmunkások és felelőségek:
    * Frontend:
@@ -108,32 +110,46 @@
 
 ### 5.2 Menühierarchiák
 
-<p>A szoftver egymásra épülő menürendszert tartalmaz. Az indításkor a felhasználót egy regisztrációs/bejelentkező menü fogadja. A regisztrációs/bejelentkezési lépések elvégzése után a főmenübe kerül a felhasználó. Itt megtalálja az input mezőt, a keresési funkció használatával érhető el a felhasználó számára érdekelt tickerhez kapcsolódó tőzdei és pénzügyi mutatók menüje. Ebben a menüpontban található a mentés, frissítés illetve az utoljára megtekintett tickerek megnézésének funkciója.</p>
+<p>A szoftver egymásra épülő menürendszert tartalmaz. Az indításkor a felhasználót egy regisztrációs/bejelentkező menü fogadja. A regisztrációs/bejelentkezési lépések elvégzése után a főmenübe kerül a felhasználó. Itt megtalálja az input mezőt, a keresési funkció használatával érhető el a felhasználó számára érdekelt tickerhez kapcsolódó tőzsdei és pénzügyi mutatók menüje. Ebben a menüpontban található a mentés, frissítés illetve az utoljára megtekintett tickerek megnézésének funkciója.</p>
 
 ## 6. Fizikai környezet
 
 ### Vásárolt softwarekomponensek és külső rendszerek
 
+<p>Nincsenek vásárolt szoftverkomponensek.</p>
+
 ### Hardver topológia
+
+<p>Kliens oldalon az alkalmazásnak szüksége van internet elérésre. De ezen követelmény teljesülése mellett a 32 és 64 bites Windowson rendszereken egyaránt működik. Amennyiben az a Windows rendszer rendelkezik .NET Frameworkkel. Szerver szempontjából python interpreter futatásához alkalmas szerver setup szükséges.</p>
 
 ### Fizikai alrendszerek
 
+<p>Kliens gépek: Olyan gépek melyek képesek Windows futatására alkalmas és internetes hozzáféréssel rendelkeznek.
+Szerver gépek: Olyan gépek amely internet hozzáféréssel rendelkezik.</p>
+
 ### Fejlesztő eszközök
+
+<p> Python, a webalkalmazás része főleg. Visual studio cliens alkalmazás úgy szintén használva van.</p>
 
 ## 7. Architekturális terv
 
 ### Webszerver
 
-### Adatbázis rendszer
+<p>Az alkalmazásunk folyamatos internet kapcsolatra van szüksége, mert a webszerverünkről hívja le a frissítéseket és kezeli a bejelentkezést.</p>
 
-### A program elérése, kezelése
+### Adatbázis rendszer (szerverhez)
+
+<p>Az alkalmazásunk folyamatos internet kapcsolatra van szüksége, mert az adatbázishoz szükséges lesz a kapcsolódás.</p>
+
+### A program elérése, kezelése (kliens)
+
+<p>A programot Windows operációs rendszert futtató és .NET keretrendszerrel rendelkező számítógép futtathatja. A futtatás egyszerű, csak kétszer kell rákattintani az állománynak a parancsikonjára.</p>
 
 ## 8. Adatbázis terv
 
 Az adatbázis az AFP API json válaszainak tükörképe. Az adatokat a business logic strukturálja tovább mielőtt REST szolgáltatással továbbküli a kliensnek.
 
 <img src="https://raw.githubusercontent.com/lesheidrich/stock_analysis_afp_II/main/img/docs/adatbazis_terv.jpg" alt="adatbázis terv diagram">
-
 
 ## 9. Implementációs terv
 
@@ -172,7 +188,8 @@ például. Teszt #01 | Regisztráció | A felhasználó az adatok megadásával 
 ... | ... | ... | ... | ...
 
 ## 11. Telepítési terv
-<p align="justify">A szoftver telepítéséhez szükségünk van egy 32 bites Windows rendszerű számítógépre, illetve szükségünk van kialakítani egy megfelelő adatbázist a webszerverhez, ezáltal internetre is szükségünk lesz.</p>
+* **Szerver:** A működéséhez egy olyan eszközre van szükség, ami képes futtatni a Python és MYSQL szervert.
+* **Kliens:** A kliens futtatásához egy .NET Framework képes rendszerű PC-re van szükség.
 
 ## 12. Karbantartási terv
 <p align="justify">Fontos ellenőrizni:</p>
