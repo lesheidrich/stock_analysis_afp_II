@@ -9,3 +9,14 @@ C:\Users\Richard\Desktop\stock_analysis_afp_II\Client\Stock_analysis_client\Stoc
 C:\Users\Richard\Desktop\stock_analysis_afp_II\Client\Stock_analysis_client\Stock_analysis_client\obj\Debug\Stock_analysis_client.csproj.CoreCompileInputs.cache
 C:\Users\Richard\Desktop\stock_analysis_afp_II\Client\Stock_analysis_client\Stock_analysis_client\obj\Debug\Stock_analysis_client.exe
 C:\Users\Richard\Desktop\stock_analysis_afp_II\Client\Stock_analysis_client\Stock_analysis_client\obj\Debug\Stock_analysis_client.pdb
+C:\Users\User\Desktop\a\stock_analysis_afp_II-main\Client\Stock_analysis_client\Stock_analysis_client\obj\Debug\Stock_analysis_client.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\a\stock_analysis_afp_II-main\Client\Stock_analysis_client\Stock_analysis_client\obj\Debug\Stock_analysis_client.csproj.SuggestedBindingRedirects.cache
+C:\Users\User\Desktop\a\stock_analysis_afp_II-main\Client\Stock_analysis_client\Stock_analysis_client\obj\Debug\Stock_analysis_client.Properties.Resources.resources
+C:\Users\User\Desktop\a\stock_analysis_afp_II-main\Client\Stock_analysis_client\Stock_analysis_client\obj\Debug\Stock_analysis_client.Register.resources
+C:\Users\User\Desktop\a\stock_analysis_afp_II-main\Client\Stock_analysis_client\Stock_analysis_client\obj\Debug\Stock_analysis_client.csproj.GenerateResource.cache
+C:\Users\User\Desktop\a\stock_analysis_afp_II-main\Client\Stock_analysis_client\Stock_analysis_client\obj\Debug\Stock_analysis_client.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\a\stock_analysis_afp_II-main\Client\Stock_analysis_client\Stock_analysis_client\obj\Debug\Stock_analysis_client.exe
+C:\Users\User\Desktop\a\stock_analysis_afp_II-main\Client\Stock_analysis_client\Stock_analysis_client\obj\Debug\Stock_analysis_client.pdb
+C:\Users\User\Desktop\a\stock_analysis_afp_II-main\Client\Stock_analysis_client\Stock_analysis_client\bin\Debug\Stock_analysis_client.exe.config
+C:\Users\User\Desktop\a\stock_analysis_afp_II-main\Client\Stock_analysis_client\Stock_analysis_client\bin\Debug\Stock_analysis_client.exe
+C:\Users\User\Desktop\a\stock_analysis_afp_II-main\Client\Stock_analysis_client\Stock_analysis_client\bin\Debug\Stock_analysis_client.pdb
