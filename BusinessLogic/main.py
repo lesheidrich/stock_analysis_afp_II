@@ -6,14 +6,14 @@ from pprint import pprint
 import datetime
 import requests
 from assemble_payload import PayloadAssembler
-from fmp_api import FMPApi
+from fmp_api import FMPapi
 from csv_downloader import CSVDownloader
 
 api_key = '07f36a5b1c35e69f0046d0e6a3ab12d6'
 ticker = "MSFT"
 payload = {'apikey': api_key}
 
-msft = FMPApi(api_key, ticker)
+msft = FMPapi(api_key, ticker)
 
 # pprint(msft.get_key_metrics_ttm())
 # pprint(msft.get_financial_ratios_ttm())
