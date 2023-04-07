@@ -20,6 +20,8 @@ class PayloadAssembler(FMPapi):
                 for k, v in package.items():
                     if k not in merged_metrics:
                         merged_metrics[k] = v
+            merged_metrics['ticker_range'] = merged_metrics.pop('range')
+
             return merged_metrics
         except:
             raise Exception("assemble_metrics failed to merge jsons in PayloadAssembler")
