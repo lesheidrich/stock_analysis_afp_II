@@ -35,7 +35,7 @@ csv_content = dl.get_balance_sheet_statement_download()
 dl.download_from_fmp_api(csv_content)
 """
 
-# msft_metrics = PayloadAssembler(api_key, ticker)
+msft_metrics = PayloadAssembler(api_key, ticker)
 # info = msft_metrics.assemble_metrics()
 # pprint(info)
 
@@ -239,8 +239,26 @@ info = {'addTotalDebt': 61270000000,
 
 import mysql.connector
 
-c = sql.Handler()
-c.insert_ticker_metrics(info)
+secfilings = msft_metrics.get_sec_filings()
+# pprint(secfilings)
+
+
+c = sql.Handler(api_key, ticker)
+# c.insert(info, "ticker_metrics")
+
+c.insert_sec_filings()
+
+#sec filings
+# for json_package in secfilings:
+#     try:
+#         c.insert(json_package, "sec_filings")
+#         print("Row inserted successfully!")
+#     except mysql.connector.Error as e:
+#         if e.errno == 1062:
+#             print("DUPLICATE ERROR: Row was not updated, it's already in the table.")
+#         else:
+#             print(f"ERROR: {e}")
+
 
 
 # url = f"https://financialmodelingprep.com/api/v3/cash-flow-statement/{ticker}?datatype=csv"
