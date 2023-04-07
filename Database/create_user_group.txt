@@ -1,0 +1,2 @@
+CREATE USER 'afpii'@'localhost' IDENTIFIED BY '5.5x';
+GRANT ALL PRIVILEGES ON afp_ii.* TO 'afpii'@'localhost';
