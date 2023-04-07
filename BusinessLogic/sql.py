@@ -44,9 +44,20 @@ class Handler(PayloadAssembler):
         cursor.close()
         conn.close()
 
-    def insert_sec_filings(self) -> None:
+    def update_ticker_metrics(self) -> None:
         """
-        Inserts new SEC filings from FMP api into afp_ii.sec_filings.
+        Insert ticker instance's merged_metrics into afp_ii.ticker_metrics table.
+        Duplicate rows are accepted.
+        :return: None
+        """
+        try:
+            self.insert(self.assemble_metrics(), "ticker_metrics")
+        except mysql.connector.Error as e:
+            print(f"ERROR: {e}")
+
+    def update_sec_filings(self) -> None:
+        """
+        Inserts new SEC filings from FMP api into afp_ii.sec_filings table.
         Duplicate rows not inserted due to unique constraint on table's link and finalLink columns.
         :return: None
         """
