@@ -103,6 +103,17 @@ class Handler(PayloadAssembler):
                 else:
                     print(f"ERROR: {e}")
 
+    def update_income_statement(self) -> None:
+        """
 
-    #write same for balance sheet, cashflow, and income stmt
-
+        :return: None
+        """
+        for json_package in self.get_income_statement():
+            try:
+                self.insert(json_package, "income_statement")
+                print("Row inserted successfully!")
+            except mysql.connector.Error as e:
+                if e.errno == 1062:
+                    print("DUPLICATE ERROR: Row was not updated, it's already in the table.")
+                else:
+                    print(f"ERROR: {e}")

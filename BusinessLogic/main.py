@@ -250,6 +250,7 @@ c = sql.Handler(api_key, ticker)
 # c.update_sec_filings()
 # c.update_balance_sheet()
 # c.update_cash_flow_statement()
+# c.update_income_statement()
 
 #sec filings
 # for json_package in secfilings:

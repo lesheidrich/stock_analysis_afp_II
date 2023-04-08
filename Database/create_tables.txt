@@ -117,7 +117,7 @@ CREATE TABLE ticker_metrics (
     price FLOAT NOT NULL,
     priceBookValueRatioTTM FLOAT NOT NULL,
     priceCashFlowRatioTTM FLOAT NOT NULL,
-  	priceEarningsRatioTTM FLOAT NOT NULL,
+    priceEarningsRatioTTM FLOAT NOT NULL,
     priceEarningsToGrowthRatioTTM FLOAT NOT NULL,
     priceFairValueTTM FLOAT NOT NULL,
     priceSalesRatioTTM FLOAT NOT NULL,
@@ -247,6 +247,7 @@ CREATE TABLE balance_sheet (
 
 
 CREATE TABLE cash_flow_statement (
+  id INT AUTO_INCREMENT PRIMARY KEY,
   date DATE,
   symbol VARCHAR(255),
   reportedCurrency VARCHAR(255),
@@ -289,3 +290,45 @@ CREATE TABLE cash_flow_statement (
   finalLink VARCHAR(255) UNIQUE
 );
 
+
+CREATE TABLE income_statement(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    date DATE NOT NULL,
+    symbol VARCHAR(255) NOT NULL,
+    reportedCurrency VARCHAR(255) NOT NULL,
+    cik VARCHAR(255) NOT NULL,
+    fillingDate DATE NOT NULL,
+    acceptedDate DATETIME NOT NULL,
+    calendarYear INT NOT NULL,
+    period VARCHAR(255) NOT NULL,
+    revenue BIGINT NOT NULL,
+    costOfRevenue BIGINT NOT NULL,
+    grossProfit BIGINT NOT NULL,
+    grossProfitRatio FLOAT NOT NULL,
+    researchAndDevelopmentExpenses BIGINT NOT NULL,
+    generalAndAdministrativeExpenses BIGINT NOT NULL,
+    sellingAndMarketingExpenses BIGINT NOT NULL,
+    sellingGeneralAndAdministrativeExpenses BIGINT NOT NULL,
+    otherExpenses BIGINT NOT NULL,
+    operatingExpenses BIGINT NOT NULL,
+    costAndExpenses BIGINT NOT NULL,
+    interestIncome BIGINT NOT NULL,
+    interestExpense BIGINT NOT NULL,
+    depreciationAndAmortization BIGINT NOT NULL,
+    ebitda BIGINT NOT NULL,
+    ebitdaratio FLOAT NOT NULL,
+    operatingIncome BIGINT NOT NULL,
+    operatingIncomeRatio FLOAT NOT NULL,
+    totalOtherIncomeExpensesNet BIGINT NOT NULL,
+    incomeBeforeTax BIGINT NOT NULL,
+    incomeBeforeTaxRatio FLOAT NOT NULL,
+    incomeTaxExpense BIGINT NOT NULL,
+    netIncome BIGINT NOT NULL,
+    netIncomeRatio FLOAT NOT NULL,
+    eps FLOAT NOT NULL,
+    epsdiluted FLOAT NOT NULL,
+    weightedAverageShsOut BIGINT NOT NULL,
+    weightedAverageShsOutDil BIGINT NOT NULL,
+    link VARCHAR(255) NOT NULL UNIQUE,
+    finalLink VARCHAR(255) NOT NULL UNIQUE
+);
