@@ -23,5 +23,5 @@ class PayloadAssembler(FMPapi):
             merged_metrics['ticker_range'] = merged_metrics.pop('range')
 
             return merged_metrics
-        except:
-            raise Exception("assemble_metrics failed to merge jsons in PayloadAssembler")
+        except Exception as e:
+            raise Exception(f"ERROR: {e}\nAssemble_metrics failed to merge jsons in PayloadAssembler!")
