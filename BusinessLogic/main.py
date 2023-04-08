@@ -246,8 +246,9 @@ secfilings = msft_metrics.get_sec_filings()
 c = sql.Handler(api_key, ticker)
 # c.insert(info, "ticker_metrics")
 
-c.update_ticker_metrics()
+# c.update_ticker_metrics()
 # c.update_sec_filings()
+c.update_balance_sheet()
 
 #sec filings
 # for json_package in secfilings:
