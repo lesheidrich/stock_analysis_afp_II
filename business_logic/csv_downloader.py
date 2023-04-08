@@ -1,9 +1,9 @@
 import os
 import pathlib
-from fmp_api import FMPApi
+from fmp_api import FMPapi
 
 
-class CSVDownloader(FMPApi):
+class CSVDownloader(FMPapi):
     def download_from_fmp_api(self, response_content) -> None:
         """
         Write content to CSV in Home/Downloads folder

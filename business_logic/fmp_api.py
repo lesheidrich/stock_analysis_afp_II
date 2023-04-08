@@ -10,7 +10,7 @@ class FMPapi:
 
     def error_respone(self, name: str, response_code: int) -> json:
         """
-        :param name: string: exact function name where error occured
+        :param name: string: exact function name where error occurred
         :param response_code: request response code
         :return: creates json for error message used in all api functions
         """
