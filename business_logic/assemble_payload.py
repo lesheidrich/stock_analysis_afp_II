@@ -2,8 +2,8 @@ import json
 from fmp_api import FMPapi
 
 
-class PayloadAssembler(FMPapi):
-    def assemble_metrics(self) -> json:
+class ForSQL(FMPapi):
+    def merge_metrics(self) -> json:
         """
        :return: json merged key metrics and financial ratios
        """
