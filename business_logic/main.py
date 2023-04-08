@@ -1,5 +1,5 @@
 from pprint import pprint
-
+from flask import Flask, jsonify
 from business_logic import sql
 
 api_key = '07f36a5b1c35e69f0046d0e6a3ab12d6'
@@ -28,8 +28,18 @@ c = sql.Handler(api_key, ticker)
 
 query = "select * from sec_filings"
 res = c.read(query)
-pprint(res)
+# pprint(res)
 
+app = Flask(__name__)
+@app.route('/data')
+def get_data():
+    res = c.read(query)
+    pprint(jsonify(res))
+    return jsonify(res)
+
+
+if __name__ == '__main__':
+    app.run(debug=True)
 
 """
 DOWNLOAD CSV
