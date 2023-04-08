@@ -6,7 +6,7 @@ from pprint import pprint
 import datetime
 import requests
 
-from BusinessLogic import sql
+from business_logic import sql
 from assemble_payload import PayloadAssembler
 from fmp_api import FMPapi
 from csv_downloader import CSVDownloader

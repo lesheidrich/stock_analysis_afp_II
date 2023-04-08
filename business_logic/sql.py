@@ -1,6 +1,6 @@
 import json
 import mysql.connector
-from BusinessLogic.assemble_payload import PayloadAssembler
+from business_logic.assemble_payload import PayloadAssembler
 
 
 class Handler(PayloadAssembler):
@@ -13,7 +13,7 @@ class Handler(PayloadAssembler):
 
     def cnx(self) -> (object, object):
         """
-        Initializes setup conn and cursor for sql
+        Initializes setup conn and cursor for phpmyadmin connection
         :return: tuple of connection and cursor objects
         """
         conn = mysql.connector.connect(
@@ -27,9 +27,9 @@ class Handler(PayloadAssembler):
 
     def insert(self, data: json, table: str) -> None:
         """
-        Inserts merged_metrics values to phpmyadmin ticker_metrics table
-        :param table: name of table to insert into
-        :param data: ticker instance's data values to insert
+        Inserts values --> phpMyAdmin.afp_ii.table (param)
+        :param data: ticker instance's json values to insert
+        :param table: str name of table to insert into
         :return: None
         """
         conn, cursor = self.cnx()
@@ -46,8 +46,8 @@ class Handler(PayloadAssembler):
 
     def update_ticker_metrics(self) -> None:
         """
-        Insert ticker instance's merged_metrics into afp_ii.ticker_metrics table.
-        Duplicate rows are accepted.
+        Ticker instance's merged_metrics (from FMP) --> afp_ii.ticker_metrics
+        Duplicate rows are accepted
         :return: None
         """
         try:
@@ -57,8 +57,8 @@ class Handler(PayloadAssembler):
 
     def update_sec_filings(self) -> None:
         """
-        Inserts new SEC filings from FMP api into afp_ii.sec_filings table.
-        Duplicate rows not inserted due to unique constraint on table's link and finalLink columns.
+        Ticker instance's SEC filings (from FMP) --> afp_ii.sec_filings table
+        Duplicate rows not accepted (links and finalLinks unique)
         :return: None
         """
         for json_package in self.get_sec_filings():
@@ -73,8 +73,8 @@ class Handler(PayloadAssembler):
 
     def update_balance_sheet(self) -> None:
         """
-        Insert new Balance Sheet from FMP api into afp_ii.balance_sheet table.
-        Duplicates are not inserted, link and finalLink columns are unique.
+        Ticker instance's Balance sheet (from FMP) --> afp_ii.balance_sheet table
+        Duplicate rows not accepted (links and finalLinks unique)
         :return: None
         """
         for json_package in self.get_balance_sheet_statement():
@@ -89,8 +89,8 @@ class Handler(PayloadAssembler):
 
     def update_cash_flow_statement(self) -> None:
         """
-        Insert new Cash-flow Statement from FMP api into afp_ii.cash_flow_statement table.
-        Duplicates are not inserted, link and finalLink columns are unique.
+        Ticker instance's Cash-flow Statement (from FMP) --> afp_ii.cash_flow_statement table
+        Duplicate rows not accepted (links and finalLinks unique)
         :return: None
         """
         for json_package in self.get_cash_flow_statement():
@@ -105,7 +105,8 @@ class Handler(PayloadAssembler):
 
     def update_income_statement(self) -> None:
         """
-
+        Ticker instance's Income Statement (from FMP) --> afp_ii.income_statement table
+        Duplicate rows not accepted (links and finalLinks unique)
         :return: None
         """
         for json_package in self.get_income_statement():
