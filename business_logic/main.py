@@ -1,10 +1,17 @@
 from pprint import pprint
 from flask import Flask, jsonify
 from business_logic import sql
+from flask import Flask, jsonify, request
 
-api_key = '07f36a5b1c35e69f0046d0e6a3ab12d6'
-ticker = "MSFT"
-payload = {'apikey': api_key}
+from business_logic.host import Host
+
+server = Host()
+server.run()
+
+
+# api_key = '07f36a5b1c35e69f0046d0e6a3ab12d6'
+# ticker = "MSFT"
+# payload = {'apikey': api_key}
 
 # msft = FMPapi(api_key, ticker)
 
@@ -19,27 +26,25 @@ payload = {'apikey': api_key}
 # pprint(msft.get_cash_flow_statement())
 # pprint(msft.get_balance_sheet_statement())
 
-c = sql.Handler(api_key, ticker)
+# c = sql.Handler(api_key, ticker)
 # c.update_ticker_metrics()
 # c.update_sec_filings()
 # c.update_balance_sheet()
 # c.update_cash_flow_statement()
 # c.update_income_statement()
 
-query = "select * from sec_filings"
-res = c.read(query)
-# pprint(res)
-
-app = Flask(__name__)
-@app.route('/data')
-def get_data():
-    res = c.read(query)
-    pprint(jsonify(res))
-    return jsonify(res)
-
-
-if __name__ == '__main__':
-    app.run(debug=True)
+# query = "select * from sec_filings"
+# # res = c.read(query)
+# # pprint(res)
+# app = Flask(__name__)
+# @app.route('/data')
+# def get_data():
+#     # res = ['puppyfarts', 'kittentitties']
+#     res = c.read(query)
+#     # pprint(jsonify(res))
+#     return jsonify(res)
+# if __name__ == '__main__':
+#     app.run(debug=True)
 
 """
 DOWNLOAD CSV
