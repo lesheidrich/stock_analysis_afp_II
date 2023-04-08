@@ -87,7 +87,21 @@ class Handler(PayloadAssembler):
                 else:
                     print(f"ERROR: {e}")
 
-    
+    def update_cash_flow_statement(self) -> None:
+        """
+        Insert new Cash-flow Statement from FMP api into afp_ii.cash_flow_statement table.
+        Duplicates are not inserted, link and finalLink columns are unique.
+        :return: None
+        """
+        for json_package in self.get_cash_flow_statement():
+            try:
+                self.insert(json_package, "cash_flow_statement")
+                print("Row inserted successfully!")
+            except mysql.connector.Error as e:
+                if e.errno == 1062:
+                    print("DUPLICATE ERROR: Row was not updated, it's already in the table.")
+                else:
+                    print(f"ERROR: {e}")
 
 
     #write same for balance sheet, cashflow, and income stmt
