@@ -118,3 +118,16 @@ class Handler(ForSQL):
                     print("DUPLICATE ERROR: Row was not updated, it's already in the table.")
                 else:
                     print(f"ERROR: {e}")
+
+    def read(self, query: str) -> [tuple]:
+        """
+        :param query: str of full sql query to run
+        :return: list of tuples for each row of table
+        """
+        conn, cursor = self.cnx()
+
+        cursor.execute(query)
+        rows = cursor.fetchall()
+        cursor.close()
+        conn.close()
+        return rows

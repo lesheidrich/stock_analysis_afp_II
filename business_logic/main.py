@@ -1,3 +1,6 @@
+from pprint import pprint
+
+from business_logic import sql
 
 api_key = '07f36a5b1c35e69f0046d0e6a3ab12d6'
 ticker = "MSFT"
@@ -16,12 +19,17 @@ payload = {'apikey': api_key}
 # pprint(msft.get_cash_flow_statement())
 # pprint(msft.get_balance_sheet_statement())
 
-# c = sql.Handler(api_key, ticker)
+c = sql.Handler(api_key, ticker)
 # c.update_ticker_metrics()
 # c.update_sec_filings()
 # c.update_balance_sheet()
 # c.update_cash_flow_statement()
 # c.update_income_statement()
+
+query = "select * from sec_filings"
+res = c.read(query)
+pprint(res)
+
 
 """
 DOWNLOAD CSV
