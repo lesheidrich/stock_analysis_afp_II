@@ -137,11 +137,16 @@ class Host:
                 query = f"SELECT * FROM ticker_metrics WHERE symbol='{ticker}' ORDER BY ticker_id desc LIMIT 1"
                 result = db.read(query)[0]
 
-                sql = f"SELECT max(date) FROM balance_sheet WHERE symbol='{ticker}'"
-                sql_date = SQLLoginCRUD.read(sql)[0][0]
-                sql_date = sql_date + relativedelta(years=1)
-                if sql_date < self.sysdate:
+                try:
+                    sql = f"SELECT max(date) FROM balance_sheet WHERE symbol='{ticker}'"
+                    sql_date = SQLLoginCRUD.read(sql)[0][0]
+                    sql_date = sql_date + relativedelta(years=1)
+                    if sql_date < self.sysdate:
+                        db.update_ticker_metrics()
+                except Exception as ex:
+                    print(f"Error: {ex}")
                     db.update_ticker_metrics()
+                    db.update_balance_sheet()
 
                 return {
                     'success': True,
