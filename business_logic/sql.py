@@ -1,6 +1,6 @@
 import json
 import mysql.connector
-from business_logic.assemble_payload import ForSQL
+from business_logic.fmp_merger import ForSQL
 
 
 class Handler(ForSQL):
@@ -13,7 +13,7 @@ class Handler(ForSQL):
 
     def cnx(self) -> (object, object):
         """
-        Initializes setup conn and cursor for phpmyadmin connection
+        Initializes setup conn and cursor for phpMyAdmin connection
         :return: tuple of connection and cursor objects
         """
         conn = mysql.connector.connect(
