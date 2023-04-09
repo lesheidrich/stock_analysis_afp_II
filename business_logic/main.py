@@ -6,15 +6,15 @@ from flask import Flask, jsonify, request
 from business_logic.host import Host
 from business_logic.sql_login import SQLLoginCRUD
 
-# if __name__ == '__main__':
-    # server = Host()
-    # server.run()
+if __name__ == '__main__':
+    server = Host()
+    server.run()
 
 q = "'bill', MD5('pwd'), '07f36a5b1c35e69f0046d0e6a3ab12d6', '0', 'bela@fmp.com', 'Hello my name is Bela'"
 # SQLLoginCRUD.insert(q)
 # SQLLoginCRUD.update("SET username='bela2' WHERE username='bill'")
 # SQLLoginCRUD.delete_where("username='bela2'")
-print(SQLLoginCRUD.read("select * from users")[1])
+# print(SQLLoginCRUD.read("select * from users")[1])
 
 
 # api_key = '07f36a5b1c35e69f0046d0e6a3ab12d6'

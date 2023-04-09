@@ -1,11 +1,25 @@
 import json
 from flask import Flask, jsonify, request
 from business_logic import sql_operator
+from business_logic.sql_login import SQLLoginCRUD
 
 
 class Host:
     def __init__(self):
         self.app = Flask(__name__)
+
+        @self.app.route('/api/users/login')
+        def get_login() -> json:
+            """
+            request args: username, pwd <-- C# client login
+            Checks args against users table, returns user's api_key
+            :return: json of user's api_key
+            """
+            un = request.args.get('username')
+            pw = request.args.get('pwd')
+            query = f"SELECT api_key FROM users WHERE username='{un}' AND pwd=md5('{pw}')"
+            result = SQLLoginCRUD.read(query)
+            return jsonify(result[0])
 
         @self.app.route('/api/ticker_metrics')
         def get_ticker_metrics() -> json:
