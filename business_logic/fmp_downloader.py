@@ -3,8 +3,8 @@ import pathlib
 from fmp_api import FMPapi
 
 
-class CSVDownloader(FMPapi):
-    def download_from_fmp_api(self, response_content) -> None:
+class FMPDownloader(FMPapi):
+    def download_csv(self, response_content) -> None:
         """
         Write content to CSV in Home/Downloads folder
         :return: None

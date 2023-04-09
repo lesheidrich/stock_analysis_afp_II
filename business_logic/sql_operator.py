@@ -1,9 +1,9 @@
 import json
 import mysql.connector
-from business_logic.assemble_payload import ForSQL
+from business_logic.fmp_merger import FMPMerger
 
 
-class Handler(ForSQL):
+class SQLOperator(FMPMerger):
     def __init__(self, api_key: str, ticker: str, user='afpii', password='5.5x', host='localhost', database='afp_ii'):
         super().__init__(api_key, ticker)
         self.user = user
@@ -13,7 +13,7 @@ class Handler(ForSQL):
 
     def cnx(self) -> (object, object):
         """
-        Initializes setup conn and cursor for phpmyadmin connection
+        Initializes setup conn and cursor for phpMyAdmin connection
         :return: tuple of connection and cursor objects
         """
         conn = mysql.connector.connect(

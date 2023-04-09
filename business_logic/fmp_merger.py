@@ -2,7 +2,7 @@ import json
 from fmp_api import FMPapi
 
 
-class ForSQL(FMPapi):
+class FMPMerger(FMPapi):
     def merge_metrics(self) -> json:
         """
        :return: json merged key metrics and financial ratios
