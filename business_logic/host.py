@@ -1,12 +1,16 @@
 import json
-from flask import Flask, jsonify, request
+import datetime
+from dateutil.relativedelta import relativedelta
+from flask import Flask, request
 from business_logic import sql_operator
+from business_logic.fmp_api import FMPapi
 from business_logic.sql_login import SQLLoginCRUD
 
 
 class Host:
     def __init__(self):
         self.app = Flask(__name__)
+        self.sysdate = datetime.date.today()
 
         @self.app.route('/api/users/login')
         def get_login() -> json:
@@ -119,68 +123,197 @@ class Host:
                     'message': "Access Denied: You do not have permission to access this resource!"
                 }
 
-
-
-
-
-        @self.app.route('/api/ticker_metrics')
+        @self.app.route('/api/ticker/ticker_metrics')
         def get_ticker_metrics() -> json:
+            """
+            phpMyAdmin afp_ii.ticker_metrics --> {metrics}
+            :return: json with result of ticker metrics
+            """
             api_key = request.args.get('api_key')
             ticker = request.args.get('ticker')
-            db = sql_operator.SQLOperator(api_key, ticker)
-            result = db.read("select * from ticker_metrics")
-            return jsonify(result)
+            try:
+                db = sql_operator.SQLOperator(api_key, ticker)
+                query = f"SELECT * FROM ticker_metrics WHERE symbol='{ticker}' ORDER BY ticker_id desc LIMIT 1"
+                result = db.read(query)[0]
 
-        @self.app.route('/api/sec_filings')
+                try:
+                    sql = f"SELECT max(date) FROM balance_sheet WHERE symbol='{ticker}'"
+                    sql_date = SQLLoginCRUD.read(sql)[0][0]
+                    sql_date = sql_date + relativedelta(years=1)
+                    if sql_date < self.sysdate:
+                        db.update_ticker_metrics()
+                except Exception as ex:
+                    print(f"Error: {ex}")
+                    db.update_ticker_metrics()
+                    db.update_balance_sheet()
+
+                return {
+                    'success': True,
+                    'status': 200,
+                    'results': result
+                }
+            except Exception as e:
+                return {
+                    'success': False,
+                    'status': 400,
+                    'message': f"Error! {e}"}
+
+        @self.app.route('/api/ticker/sec_filings')
         def get_sec_filings() -> json:
+            """
+            phpMyAdmin afp_ii.sec_filings --> {SEC filings}
+            :return: json with result of SEC filings
+            """
             api_key = request.args.get('api_key')
             ticker = request.args.get('ticker')
-            db = sql_operator.SQLOperator(api_key, ticker)
-            result = db.read("select * from sec_filings")
-            return jsonify(result)
+            try:
+                db = sql_operator.SQLOperator(api_key, ticker)
+                result = db.read("SELECT * FROM sec_filings")
 
-        @self.app.route('/api/balance_sheet')
+                try:
+                    sql = f"SELECT max(date) FROM balance_sheet WHERE symbol='{ticker}'"
+                    sql_date = SQLLoginCRUD.read(sql)[0][0]
+                    sql_date = sql_date + relativedelta(years=1)
+                    if sql_date < self.sysdate:
+                        db.update_sec_filings()
+                except Exception as ex:
+                    print(f"Error: {ex}")
+                    db.update_sec_filings()
+                    db.update_balance_sheet()
+
+                return {
+                    'success': True,
+                    'status': 200,
+                    'results': result
+                }
+            except Exception as e:
+                return {
+                    'success': False,
+                    'status': 400,
+                    'message': f"Error! {e}"}
+
+        @self.app.route('/api/ticker/balance_sheet')
         def get_balance_sheet() -> json:
+            """
+            phpMyAdmin afp_ii.balance_sheet --> {balance sheets}
+            :return: json with result of balance sheets
+            """
             api_key = request.args.get('api_key')
             ticker = request.args.get('ticker')
-            db = sql_operator.SQLOperator(api_key, ticker)
-            result = db.read("select * from balance_sheet")
-            return jsonify(result)
+            try:
+                db = sql_operator.SQLOperator(api_key, ticker)
+                result = db.read("SELECT * FROM balance_sheet")
 
-        @self.app.route('/api/cash_flow_statement')
-        def get_cashflow_statement() -> json:
+                try:
+                    sql = f"SELECT max(date) FROM balance_sheet WHERE symbol='{ticker}'"
+                    sql_date = SQLLoginCRUD.read(sql)[0][0]
+                    sql_date = sql_date + relativedelta(years=1)
+                    if sql_date < self.sysdate:
+                        db.update_balance_sheet()
+                except Exception as ex:
+                    print(f"Error: {ex}")
+                    db.update_balance_sheet()
+
+                return {
+                    'success': True,
+                    'status': 200,
+                    'results': result
+                }
+            except Exception as e:
+                return {
+                    'success': False,
+                    'status': 400,
+                    'message': f"Error! {e}"}
+
+        @self.app.route('/api/ticker/cash_flow_statement')
+        def get_cash_flow_statement() -> json:
+            """
+            phpMyAdmin afp_ii.cash_flow_statement --> {cash flow statements}
+            :return: json with result of cash flow statements
+            """
             api_key = request.args.get('api_key')
             ticker = request.args.get('ticker')
-            db = sql_operator.SQLOperator(api_key, ticker)
-            result = db.read("select * from cash_flow_statement")
-            return jsonify(result)
+            try:
+                db = sql_operator.SQLOperator(api_key, ticker)
+                result = db.read("SELECT * FROM cash_flow_statement")
 
-        @self.app.route('/api/income_statement')
+                try:
+                    sql = f"SELECT max(date) FROM balance_sheet WHERE symbol='{ticker}'"
+                    sql_date = SQLLoginCRUD.read(sql)[0][0]
+                    sql_date = sql_date + relativedelta(years=1)
+                    if sql_date < self.sysdate:
+                        db.update_cash_flow_statement()
+                except Exception as ex:
+                    print(f"Error: {ex}")
+                    db.update_cash_flow_statement()
+                    db.update_balance_sheet()
+
+                return {
+                    'success': True,
+                    'status': 200,
+                    'results': result
+                }
+            except Exception as e:
+                return {
+                    'success': False,
+                    'status': 400,
+                    'message': f"Error! {e}"}
+
+        @self.app.route('/api/ticker/income_statement')
         def get_income_statement() -> json:
+            """
+            phpMyAdmin afp_ii.income_statement --> {income statements}
+            :return: json with result of income statements
+            """
             api_key = request.args.get('api_key')
             ticker = request.args.get('ticker')
-            db = sql_operator.SQLOperator(api_key, ticker)
-            result = db.read("select * from income_statement")
-            return jsonify(result)
+            try:
+                db = sql_operator.SQLOperator(api_key, ticker)
+                result = db.read("SELECT * FROM income_statement")
+
+                try:
+                    sql = f"SELECT max(date) FROM balance_sheet WHERE symbol='{ticker}'"
+                    sql_date = SQLLoginCRUD.read(sql)[0][0]
+                    sql_date = sql_date + relativedelta(years=1)
+                    if sql_date < self.sysdate:
+                        db.update_income_statement()
+                except Exception as ex:
+                    print(f"Error: {ex}")
+                    db.update_income_statement()
+                    db.update_balance_sheet()
+
+                return {
+                    'success': True,
+                    'status': 200,
+                    'results': result
+                }
+            except Exception as e:
+                return {
+                    'success': False,
+                    'status': 400,
+                    'message': f"Error! {e}"}
+
+        @self.app.route('/api/news')
+        def get_news() -> json:
+            """
+            FMP api service based news articles.
+            :return: json with news articles
+            """
+            api_key = request.args.get('api_key')
+            ticker = 'MSFT'
+            try:
+                fmp = FMPapi(api_key, ticker)
+                result = fmp.get_news_articles()
+                return {
+                    'success': True,
+                    'status': 200,
+                    'results': result['content']
+                }
+            except Exception as e:
+                return {
+                    'success': False,
+                    'status': 400,
+                    'message': f"Error! {e}"}
 
     def run(self) -> None:
         self.app.run(debug=True)
-
-
-
-# @app.route('/data')
-# def get_data():
-#     api_key = request.args.get('api_key')
-#     ticker = request.args.get('ticker')
-#     c = sql.Handler(api_key, ticker)
-#     query = "select * from sec_filings"
-#     print(ticker)
-#
-#     # res = ['puppyfarts', 'kittentitties']
-#     res = c.read(query)
-#     # pprint(jsonify(res))
-#     return jsonify(res)
-#
-#
-# if __name__ == '__main__':
-#     app.run(debug=True)

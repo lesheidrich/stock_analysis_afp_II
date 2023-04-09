@@ -1,14 +1,29 @@
+import datetime
 from pprint import pprint
+
+from dateutil.relativedelta import relativedelta
 from flask import Flask, jsonify
 from business_logic import sql_operator
 from flask import Flask, jsonify, request
 
+from business_logic.fmp_api import FMPapi
 from business_logic.host import Host
 from business_logic.sql_login import SQLLoginCRUD
-
+#
 if __name__ == '__main__':
     server = Host()
     server.run()
+
+# sysdate = datetime.date.today()
+# sql_date = SQLLoginCRUD.read("select max(date) from balance_sheet where symbol='MSFT'")[0][0]
+# sql_date = sql_date + relativedelta(years=1)
+# if sql_date < sysdate:
+#     print("update")
+# print(sql_date > sysdate)
+
+
+
+
 
 
 # sql = f"SELECT is_admin FROM users WHERE api_key='not applicable'"
@@ -25,12 +40,13 @@ q = "'bill', MD5('pwd'), '07f36a5b1c35e69f0046d0e6a3ab12d6', '0', 'bela@fmp.com'
 # api_key = '07f36a5b1c35e69f0046d0e6a3ab12d6'
 # ticker = "MSFT"
 # payload = {'apikey': api_key}
-
+#
 # msft = FMPapi(api_key, ticker)
 
 # pprint(msft.get_key_metrics_ttm())
 # pprint(msft.get_financial_ratios_ttm())
-# pprint(msft.get_news_articles())
+# news = msft.get_news_articles()['content']
+# pprint(news)
 # pprint(msft.get_company_profile())
 # pprint(msft.get_fmp_rating())
 # pprint(msft.get_enterprise_value())
