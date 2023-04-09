@@ -1,5 +1,5 @@
 import json
-from flask import Flask, jsonify, request
+from flask import Flask, request
 from business_logic import sql_operator
 from business_logic.fmp_api import FMPapi
 from business_logic.sql_login import SQLLoginCRUD
