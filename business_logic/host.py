@@ -1,6 +1,5 @@
 import json
 import datetime
-
 from dateutil.relativedelta import relativedelta
 from flask import Flask, request
 from business_logic import sql_operator
@@ -170,6 +169,18 @@ class Host:
             try:
                 db = sql_operator.SQLOperator(api_key, ticker)
                 result = db.read("SELECT * FROM sec_filings")
+
+                try:
+                    sql = f"SELECT max(date) FROM balance_sheet WHERE symbol='{ticker}'"
+                    sql_date = SQLLoginCRUD.read(sql)[0][0]
+                    sql_date = sql_date + relativedelta(years=1)
+                    if sql_date < self.sysdate:
+                        db.update_sec_filings()
+                except Exception as ex:
+                    print(f"Error: {ex}")
+                    db.update_sec_filings()
+                    db.update_balance_sheet()
+
                 return {
                     'success': True,
                     'status': 200,
@@ -192,6 +203,17 @@ class Host:
             try:
                 db = sql_operator.SQLOperator(api_key, ticker)
                 result = db.read("SELECT * FROM balance_sheet")
+
+                try:
+                    sql = f"SELECT max(date) FROM balance_sheet WHERE symbol='{ticker}'"
+                    sql_date = SQLLoginCRUD.read(sql)[0][0]
+                    sql_date = sql_date + relativedelta(years=1)
+                    if sql_date < self.sysdate:
+                        db.update_balance_sheet()
+                except Exception as ex:
+                    print(f"Error: {ex}")
+                    db.update_balance_sheet()
+
                 return {
                     'success': True,
                     'status': 200,
@@ -214,6 +236,18 @@ class Host:
             try:
                 db = sql_operator.SQLOperator(api_key, ticker)
                 result = db.read("SELECT * FROM cash_flow_statement")
+
+                try:
+                    sql = f"SELECT max(date) FROM balance_sheet WHERE symbol='{ticker}'"
+                    sql_date = SQLLoginCRUD.read(sql)[0][0]
+                    sql_date = sql_date + relativedelta(years=1)
+                    if sql_date < self.sysdate:
+                        db.update_cash_flow_statement()
+                except Exception as ex:
+                    print(f"Error: {ex}")
+                    db.update_cash_flow_statement()
+                    db.update_balance_sheet()
+
                 return {
                     'success': True,
                     'status': 200,
@@ -236,6 +270,18 @@ class Host:
             try:
                 db = sql_operator.SQLOperator(api_key, ticker)
                 result = db.read("SELECT * FROM income_statement")
+
+                try:
+                    sql = f"SELECT max(date) FROM balance_sheet WHERE symbol='{ticker}'"
+                    sql_date = SQLLoginCRUD.read(sql)[0][0]
+                    sql_date = sql_date + relativedelta(years=1)
+                    if sql_date < self.sysdate:
+                        db.update_income_statement()
+                except Exception as ex:
+                    print(f"Error: {ex}")
+                    db.update_income_statement()
+                    db.update_balance_sheet()
+
                 return {
                     'success': True,
                     'status': 200,
