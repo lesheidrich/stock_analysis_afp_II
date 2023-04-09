@@ -5,8 +5,9 @@ from flask import Flask, jsonify, request
 
 from business_logic.host import Host
 
-server = Host()
-server.run()
+if __name__ == '__main__':
+    server = Host()
+    server.run()
 
 
 # api_key = '07f36a5b1c35e69f0046d0e6a3ab12d6'
