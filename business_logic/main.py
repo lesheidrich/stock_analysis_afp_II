@@ -1,4 +1,7 @@
+import datetime
 from pprint import pprint
+
+from dateutil.relativedelta import relativedelta
 from flask import Flask, jsonify
 from business_logic import sql_operator
 from flask import Flask, jsonify, request
@@ -6,10 +9,22 @@ from flask import Flask, jsonify, request
 from business_logic.fmp_api import FMPapi
 from business_logic.host import Host
 from business_logic.sql_login import SQLLoginCRUD
-
+#
 if __name__ == '__main__':
     server = Host()
     server.run()
+
+# sysdate = datetime.date.today()
+# sql_date = SQLLoginCRUD.read("select max(date) from balance_sheet where symbol='MSFT'")[0][0]
+# sql_date = sql_date + relativedelta(years=1)
+# if sql_date < sysdate:
+#     print("update")
+# print(sql_date > sysdate)
+
+
+
+
+
 
 # sql = f"SELECT is_admin FROM users WHERE api_key='not applicable'"
 # a = SQLLoginCRUD.read(sql)[0][0]

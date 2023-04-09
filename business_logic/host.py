@@ -1,4 +1,7 @@
 import json
+import datetime
+
+from dateutil.relativedelta import relativedelta
 from flask import Flask, request
 from business_logic import sql_operator
 from business_logic.fmp_api import FMPapi
@@ -8,6 +11,7 @@ from business_logic.sql_login import SQLLoginCRUD
 class Host:
     def __init__(self):
         self.app = Flask(__name__)
+        self.sysdate = datetime.date.today()
 
         @self.app.route('/api/users/login')
         def get_login() -> json:
@@ -132,6 +136,13 @@ class Host:
                 db = sql_operator.SQLOperator(api_key, ticker)
                 query = f"SELECT * FROM ticker_metrics WHERE symbol='{ticker}' ORDER BY ticker_id desc LIMIT 1"
                 result = db.read(query)[0]
+
+                sql = f"SELECT max(date) FROM balance_sheet WHERE symbol='{ticker}'"
+                sql_date = SQLLoginCRUD.read(sql)[0][0]
+                sql_date = sql_date + relativedelta(years=1)
+                if sql_date < self.sysdate:
+                    db.update_ticker_metrics()
+
                 return {
                     'success': True,
                     'status': 200,
