@@ -119,17 +119,28 @@ class Host:
                     'message': "Access Denied: You do not have permission to access this resource!"
                 }
 
-
-
-
-
-        @self.app.route('/api/ticker_metrics')
+        @self.app.route('/api/ticker/ticker_metrics')
         def get_ticker_metrics() -> json:
+            """
+            phpMyAdmin afp_ii.ticker_metrics --> {metrics}
+            :return: json with result of ticker metrics
+            """
             api_key = request.args.get('api_key')
             ticker = request.args.get('ticker')
-            db = sql_operator.SQLOperator(api_key, ticker)
-            result = db.read("select * from ticker_metrics")
-            return jsonify(result)
+            try:
+                db = sql_operator.SQLOperator(api_key, ticker)
+                query = f"SELECT * FROM ticker_metrics WHERE symbol='{ticker}' ORDER BY ticker_id desc LIMIT 1"
+                result = db.read(query)[0]
+                return {
+                    'success': True,
+                    'status': 200,
+                    'results': result
+                }
+            except Exception as e:
+                return {
+                    'success': False,
+                    'status': 400,
+                    'message': f"Error! {e}"}
 
         @self.app.route('/api/sec_filings')
         def get_sec_filings() -> json:
@@ -162,6 +173,8 @@ class Host:
             db = sql_operator.SQLOperator(api_key, ticker)
             result = db.read("select * from income_statement")
             return jsonify(result)
+
+        #get all tickers list
 
     def run(self) -> None:
         self.app.run(debug=True)
