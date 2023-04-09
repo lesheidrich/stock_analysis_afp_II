@@ -21,6 +21,11 @@ class Host:
             result = SQLLoginCRUD.read(query)
             return jsonify(result[0])
 
+        #api kulcs alapjan select is_admin where api_key=apikey
+        #ha 0 nem admin, ha mas akkor az, ez az admin check login alapjan
+        #erre crud
+        #userek tudjak magukat krealni login nelkul
+
         @self.app.route('/api/ticker_metrics')
         def get_ticker_metrics() -> json:
             api_key = request.args.get('api_key')
