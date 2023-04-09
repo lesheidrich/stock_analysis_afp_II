@@ -1,6 +1,6 @@
 from pprint import pprint
 from flask import Flask, jsonify
-from business_logic import sql
+from business_logic import sql_operator
 from flask import Flask, jsonify, request
 
 from business_logic.host import Host

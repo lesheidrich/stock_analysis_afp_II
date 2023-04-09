@@ -1,6 +1,6 @@
 import json
 from flask import Flask, jsonify, request
-from business_logic import sql
+from business_logic import sql_operator
 
 
 class Host:
@@ -11,7 +11,7 @@ class Host:
         def get_ticker_metrics() -> json:
             api_key = request.args.get('api_key')
             ticker = request.args.get('ticker')
-            db = sql.Handler(api_key, ticker)
+            db = sql_operator.SQLOperator(api_key, ticker)
             result = db.read("select * from ticker_metrics")
             return jsonify(result)
 
@@ -19,7 +19,7 @@ class Host:
         def get_sec_filings() -> json:
             api_key = request.args.get('api_key')
             ticker = request.args.get('ticker')
-            db = sql.Handler(api_key, ticker)
+            db = sql_operator.SQLOperator(api_key, ticker)
             result = db.read("select * from sec_filings")
             return jsonify(result)
 
@@ -27,7 +27,7 @@ class Host:
         def get_balance_sheet() -> json:
             api_key = request.args.get('api_key')
             ticker = request.args.get('ticker')
-            db = sql.Handler(api_key, ticker)
+            db = sql_operator.SQLOperator(api_key, ticker)
             result = db.read("select * from balance_sheet")
             return jsonify(result)
 
@@ -35,7 +35,7 @@ class Host:
         def get_cashflow_statement() -> json:
             api_key = request.args.get('api_key')
             ticker = request.args.get('ticker')
-            db = sql.Handler(api_key, ticker)
+            db = sql_operator.SQLOperator(api_key, ticker)
             result = db.read("select * from cash_flow_statement")
             return jsonify(result)
 
@@ -43,7 +43,7 @@ class Host:
         def get_income_statement() -> json:
             api_key = request.args.get('api_key')
             ticker = request.args.get('ticker')
-            db = sql.Handler(api_key, ticker)
+            db = sql_operator.SQLOperator(api_key, ticker)
             result = db.read("select * from income_statement")
             return jsonify(result)
 
