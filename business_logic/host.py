@@ -1,4 +1,6 @@
 import json
+
+import MySQLdb.connections
 from flask import Flask, jsonify, request
 from business_logic import sql_operator
 from business_logic.sql_login import SQLLoginCRUD
@@ -21,10 +23,26 @@ class Host:
             result = SQLLoginCRUD.read(query)
             return jsonify(result[0])
 
+        @self.app.route('/api/users/create')
+        def create_user() -> {bool}:
+            """
+            request arg: string of partial mysql insert into command as follows:
+                key name: query
+                'alfonzo', MD5('pwd'), 'apikey', '0', 'email', 'full name'
+            :return: true if user created
+            """
+            query = request.args.get('query')
+            try:
+                SQLLoginCRUD.insert(query)
+                return jsonify(True)
+            except Exception as e:
+                print(f"ERROR: {e}")
+                return jsonify(False)
+
         #api kulcs alapjan select is_admin where api_key=apikey
         #ha 0 nem admin, ha mas akkor az, ez az admin check login alapjan
-        #erre crud
-        #userek tudjak magukat krealni login nelkul
+
+
 
         @self.app.route('/api/ticker_metrics')
         def get_ticker_metrics() -> json:
