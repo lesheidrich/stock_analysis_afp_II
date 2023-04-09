@@ -1,6 +1,7 @@
 import json
 from flask import Flask, jsonify, request
 from business_logic import sql_operator
+from business_logic.fmp_api import FMPapi
 from business_logic.sql_login import SQLLoginCRUD
 
 
@@ -142,58 +143,115 @@ class Host:
                     'status': 400,
                     'message': f"Error! {e}"}
 
-        @self.app.route('/api/sec_filings')
+        @self.app.route('/api/ticker/sec_filings')
         def get_sec_filings() -> json:
+            """
+            phpMyAdmin afp_ii.sec_filings --> {SEC filings}
+            :return: json with result of SEC filings
+            """
             api_key = request.args.get('api_key')
             ticker = request.args.get('ticker')
-            db = sql_operator.SQLOperator(api_key, ticker)
-            result = db.read("select * from sec_filings")
-            return jsonify(result)
+            try:
+                db = sql_operator.SQLOperator(api_key, ticker)
+                result = db.read("SELECT * FROM sec_filings")
+                return {
+                    'success': True,
+                    'status': 200,
+                    'results': result
+                }
+            except Exception as e:
+                return {
+                    'success': False,
+                    'status': 400,
+                    'message': f"Error! {e}"}
 
-        @self.app.route('/api/balance_sheet')
+        @self.app.route('/api/ticker/balance_sheet')
         def get_balance_sheet() -> json:
+            """
+            phpMyAdmin afp_ii.balance_sheet --> {balance sheets}
+            :return: json with result of balance sheets
+            """
             api_key = request.args.get('api_key')
             ticker = request.args.get('ticker')
-            db = sql_operator.SQLOperator(api_key, ticker)
-            result = db.read("select * from balance_sheet")
-            return jsonify(result)
+            try:
+                db = sql_operator.SQLOperator(api_key, ticker)
+                result = db.read("SELECT * FROM balance_sheet")
+                return {
+                    'success': True,
+                    'status': 200,
+                    'results': result
+                }
+            except Exception as e:
+                return {
+                    'success': False,
+                    'status': 400,
+                    'message': f"Error! {e}"}
 
-        @self.app.route('/api/cash_flow_statement')
-        def get_cashflow_statement() -> json:
+        @self.app.route('/api/ticker/cash_flow_statement')
+        def get_cash_flow_statement() -> json:
+            """
+            phpMyAdmin afp_ii.cash_flow_statement --> {cash flow statements}
+            :return: json with result of cash flow statements
+            """
             api_key = request.args.get('api_key')
             ticker = request.args.get('ticker')
-            db = sql_operator.SQLOperator(api_key, ticker)
-            result = db.read("select * from cash_flow_statement")
-            return jsonify(result)
+            try:
+                db = sql_operator.SQLOperator(api_key, ticker)
+                result = db.read("SELECT * FROM cash_flow_statement")
+                return {
+                    'success': True,
+                    'status': 200,
+                    'results': result
+                }
+            except Exception as e:
+                return {
+                    'success': False,
+                    'status': 400,
+                    'message': f"Error! {e}"}
 
-        @self.app.route('/api/income_statement')
+        @self.app.route('/api/ticker/income_statement')
         def get_income_statement() -> json:
+            """
+            phpMyAdmin afp_ii.income_statement --> {income statements}
+            :return: json with result of income statements
+            """
             api_key = request.args.get('api_key')
             ticker = request.args.get('ticker')
-            db = sql_operator.SQLOperator(api_key, ticker)
-            result = db.read("select * from income_statement")
-            return jsonify(result)
+            try:
+                db = sql_operator.SQLOperator(api_key, ticker)
+                result = db.read("SELECT * FROM income_statement")
+                return {
+                    'success': True,
+                    'status': 200,
+                    'results': result
+                }
+            except Exception as e:
+                return {
+                    'success': False,
+                    'status': 400,
+                    'message': f"Error! {e}"}
 
-        #get all tickers list
+        @self.app.route('/api/news')
+        def get_news() -> json:
+            """
+            FMP api service based news articles.
+            :return: json with news articles
+            """
+            api_key = request.args.get('api_key')
+            ticker = 'MSFT'
+            try:
+                fmp = FMPapi(api_key, ticker)
+                result = fmp.get_news_articles()
+                return {
+                    'success': True,
+                    'status': 200,
+                    'results': result['content']
+                }
+            except Exception as e:
+                return {
+                    'success': False,
+                    'status': 400,
+                    'message': f"Error! {e}"}
 
     def run(self) -> None:
         self.app.run(debug=True)
-
-
-
-# @app.route('/data')
-# def get_data():
-#     api_key = request.args.get('api_key')
-#     ticker = request.args.get('ticker')
-#     c = sql.Handler(api_key, ticker)
-#     query = "select * from sec_filings"
-#     print(ticker)
-#
-#     # res = ['puppyfarts', 'kittentitties']
-#     res = c.read(query)
-#     # pprint(jsonify(res))
-#     return jsonify(res)
-#
-#
-# if __name__ == '__main__':
-#     app.run(debug=True)
