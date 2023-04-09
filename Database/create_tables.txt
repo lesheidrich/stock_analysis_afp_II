@@ -346,3 +346,7 @@ CREATE TABLE users(
     full_name VARCHAR(255) NOT NULL
 );
     
+INSERT INTO `users`(username, pwd, api_key, is_admin, email, full_name) VALUES 
+    ('admin', MD5('admin'), 'not applicable', '1', 'admin@fmp.com', 'admin'),
+    ('bela', MD5('pwd'), '07f36a5b1c35e69f0046d0e6a3ab12d6', '0', 'bela@fmp.com', 'Hello my name is Bela'),
+    ('jenna', MD5('pwd'), '2b1c52c776217c377aa030db56150115', '0', 'jenna@fmp.com', 'Jennas in the house');
