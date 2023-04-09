@@ -10,6 +10,11 @@ if __name__ == '__main__':
     server = Host()
     server.run()
 
+
+# sql = f"SELECT is_admin FROM users WHERE api_key='not applicable'"
+# a = SQLLoginCRUD.read(sql)[0][0]
+# print(a)
+
 q = "'bill', MD5('pwd'), '07f36a5b1c35e69f0046d0e6a3ab12d6', '0', 'bela@fmp.com', 'Hello my name is Bela'"
 # SQLLoginCRUD.insert(q)
 # SQLLoginCRUD.update("SET username='bela2' WHERE username='bill'")

@@ -1,6 +1,4 @@
 import json
-
-import MySQLdb.connections
 from flask import Flask, jsonify, request
 from business_logic import sql_operator
 from business_logic.sql_login import SQLLoginCRUD
@@ -15,32 +13,113 @@ class Host:
             """
             request args: username, pwd <-- C# client login
             Checks args against users table, returns user's api_key
-            :return: json of user's api_key
+            :return: json status info
             """
             un = request.args.get('username')
             pw = request.args.get('pwd')
             query = f"SELECT api_key FROM users WHERE username='{un}' AND pwd=md5('{pw}')"
-            result = SQLLoginCRUD.read(query)
-            return jsonify(result[0])
+            try:
+                result = SQLLoginCRUD.read(query)
+                return {
+                    'success': True,
+                    'status': 200,
+                    'api_key': result[0][0]
+                }
+            except Exception as e:
+                return {
+                    'success': False,
+                    'status': 400,
+                    'message': f"Error! {e}"}
 
         @self.app.route('/api/users/create')
-        def create_user() -> {bool}:
+        def create_user() -> json:
             """
             request arg: string of partial mysql insert into command as follows:
                 key name: query
-                'alfonzo', MD5('pwd'), 'apikey', '0', 'email', 'full name'
-            :return: true if user created
+                sample value: 'alfonzo', md5('pwd'), 'apikey', '0', 'email', 'full name'
+            :return: json status info
             """
             query = request.args.get('query')
             try:
                 SQLLoginCRUD.insert(query)
-                return jsonify(True)
+                return {
+                    'success': True,
+                    'status': 200,
+                    'message': f"User has been created successfully with params: {query}"
+                }
             except Exception as e:
-                print(f"ERROR: {e}")
-                return jsonify(False)
+                return {
+                    'success': False,
+                    'status': 400,
+                    'message': f"Error! {e}"}
 
-        #api kulcs alapjan select is_admin where api_key=apikey
-        #ha 0 nem admin, ha mas akkor az, ez az admin check login alapjan
+        @self.app.route('/api/users/delete')
+        def delete_user() -> json:
+            """
+            request arg: delete user where condition met:
+                key name: query
+                sample value: username='bela'
+            Admin status required!
+            :return: json status info
+            """
+            apikey = request.args.get('api_key')
+            query = request.args.get('query')
+            sql = f"SELECT is_admin FROM users WHERE api_key='{apikey}'"
+            admin = SQLLoginCRUD.read(sql)[0][0]
+            if admin > 0:
+                try:
+                    SQLLoginCRUD.delete_where(query)
+                    return {
+                        'success': True,
+                        'status': 200,
+                        'message': f"User has been deleted successfully with params: {query}"
+                    }
+                except Exception as e:
+                    return {
+                        'success': False,
+                        'status': 400,
+                        'message': f"Error! {e}"}
+            else:
+                return {
+                    'success': False,
+                    'status': 403,
+                    'message': "Access Denied: You do not have permission to access this resource!"
+                }
+
+        @self.app.route('/api/users/update')
+        def update_user() -> json:
+            """
+            request arg: update where condition met:
+                key name: query
+                sample value: SET username='bill' WHERE username='bela'
+            Admin status required!
+            :return: json status info
+            """
+            apikey = request.args.get('api_key')
+            query = request.args.get('query')
+            sql = f"SELECT is_admin FROM users WHERE api_key='{apikey}'"
+            admin = SQLLoginCRUD.read(sql)[0][0]
+            if admin > 0:
+                try:
+                    SQLLoginCRUD.update(query)
+                    return {
+                        'success': True,
+                        'status': 200,
+                        'message': f"User has been updated successfully where: {query}!"
+                    }
+                except Exception as e:
+                    return {
+                        'success': False,
+                        'status': 400,
+                        'message': f"Error! {e}"}
+            else:
+                return {
+                    'success': False,
+                    'status': 403,
+                    'message': "Access Denied: You do not have permission to access this resource!"
+                }
+
+
 
 
 
