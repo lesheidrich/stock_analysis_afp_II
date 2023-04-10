@@ -1,7 +1,7 @@
 import json
 import datetime
 from dateutil.relativedelta import relativedelta
-from flask import Flask, request
+from flask import Flask, request, jsonify
 from business_logic import sql_operator
 from business_logic.fmp_api import FMPapi
 from business_logic.sql_login import SQLLoginCRUD
@@ -27,8 +27,7 @@ class Host:
                 return {
                     'success': True,
                     'status': 200,
-                    'api_key': result[0][0]
-                }
+                    'api_key': result[0][0]}
             except Exception as e:
                 return {
                     'success': False,
@@ -49,8 +48,7 @@ class Host:
                 return {
                     'success': True,
                     'status': 200,
-                    'message': f"User has been created successfully with params: {query}"
-                }
+                    'message': f"User has been created successfully with params: {query}"}
             except Exception as e:
                 return {
                     'success': False,
@@ -76,8 +74,7 @@ class Host:
                     return {
                         'success': True,
                         'status': 200,
-                        'message': f"User has been deleted successfully with params: {query}"
-                    }
+                        'message': f"User has been deleted successfully with params: {query}"}
                 except Exception as e:
                     return {
                         'success': False,
@@ -87,8 +84,7 @@ class Host:
                 return {
                     'success': False,
                     'status': 403,
-                    'message': "Access Denied: You do not have permission to access this resource!"
-                }
+                    'message': "Access Denied: You do not have permission to access this resource!"}
 
         @self.app.route('/api/users/update')
         def update_user() -> json:
@@ -109,8 +105,7 @@ class Host:
                     return {
                         'success': True,
                         'status': 200,
-                        'message': f"User has been updated successfully where: {query}!"
-                    }
+                        'message': f"User has been updated successfully where: {query}!"}
                 except Exception as e:
                     return {
                         'success': False,
@@ -120,8 +115,7 @@ class Host:
                 return {
                     'success': False,
                     'status': 403,
-                    'message': "Access Denied: You do not have permission to access this resource!"
-                }
+                    'message': "Access Denied: You do not have permission to access this resource!"}
 
         @self.app.route('/api/ticker/ticker_metrics')
         def get_ticker_metrics() -> json:
@@ -150,8 +144,7 @@ class Host:
                 return {
                     'success': True,
                     'status': 200,
-                    'results': result
-                }
+                    'results': result}
             except Exception as e:
                 return {
                     'success': False,
@@ -184,8 +177,7 @@ class Host:
                 return {
                     'success': True,
                     'status': 200,
-                    'results': result
-                }
+                    'results': result}
             except Exception as e:
                 return {
                     'success': False,
@@ -217,8 +209,7 @@ class Host:
                 return {
                     'success': True,
                     'status': 200,
-                    'results': result
-                }
+                    'results': result}
             except Exception as e:
                 return {
                     'success': False,
@@ -251,8 +242,7 @@ class Host:
                 return {
                     'success': True,
                     'status': 200,
-                    'results': result
-                }
+                    'results': result}
             except Exception as e:
                 return {
                     'success': False,
@@ -285,8 +275,7 @@ class Host:
                 return {
                     'success': True,
                     'status': 200,
-                    'results': result
-                }
+                    'results': result}
             except Exception as e:
                 return {
                     'success': False,
