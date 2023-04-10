@@ -4,20 +4,23 @@ from fmp_api import FMPapi
 
 
 class FMPDownloader(FMPapi):
-    def download_csv(self, response_content) -> None:
+    def download_csv(self, statement_name: str) -> bool:
         """
         Write content to CSV in Home/Downloads folder
         :return: None
         """
-        if response_content["message"] == "success":
+        try:
             home_dir = pathlib.Path.home()
             file_path = os.path.join(
                 home_dir,
                 "Downloads",
-                f'{self.ticker}_{response_content["type"]}.csv'
+                f'{self.ticker}_{statement_name}.csv'
             )
 
             with open(file_path, "w") as file:
-                file.write(response_content["content"])
-        else:
-            raise Exception("Unable to write CSV content")
+                file.write(self.get_cash_flow_statement_download().content.decode('utf-8'))
+            return True
+        except Exception as e:
+            print(f"Error: {e}")
+            return False
+
