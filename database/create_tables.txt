@@ -1,4 +1,4 @@
-CREATE DATABASE afp_II;
+#CREATE DATABASE afp_II;
 
 DROP TABLE IF EXISTS ticker_metrics;
 
