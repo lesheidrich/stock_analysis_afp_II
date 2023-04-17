@@ -39,4 +39,4 @@
 
 ## Inicializáció
 
-<li><a href="https://github.com/lesheidrich/stock_analysis_afp_II/blob/main/init/init_notes.md">Inicializációs utasítások</a></li>
+<a href="https://github.com/lesheidrich/stock_analysis_afp_II/blob/main/init/init_notes.md">Inicializációs utasítások</a>
