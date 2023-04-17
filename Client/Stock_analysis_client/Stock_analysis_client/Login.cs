@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using RestSharp;
 
 namespace Stock_analysis_client
 {
@@ -23,6 +24,21 @@ namespace Stock_analysis_client
         }
 
         private void Loginbt_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SingUpbt_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Usernametb_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Passwordtb_TextChanged(object sender, EventArgs e)
         {
 
         }
