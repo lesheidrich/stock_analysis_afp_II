@@ -52,6 +52,9 @@ namespace Stock_analysis_client
 
         }
 
-
+        private void Register_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Login.GetInstance().Show();
+        }
     }
 }
