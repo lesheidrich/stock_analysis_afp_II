@@ -1,3 +1,10 @@
+"""
+Class is for client
+only meant to be guide
+TODO: delete after complete on client side
+"""
+
+
 class StockScreeningTable:
     def __init__(self, result):
         self.result = result
@@ -256,9 +263,11 @@ class StockScreeningTable:
 
     def sales_general_and_administrative_to_revenue(self, result):
         if (0.1 <= result['salesGeneralAndAdministrativeToRevenueTTM'] <= 0.15):
-            return ['Sales, general and administrative expenses to revenue', 'salesGeneralAndAdministrativeToRevenueTTM', 'ok']
+            return ['Sales, general and administrative expenses to revenue',
+                    'salesGeneralAndAdministrativeToRevenueTTM', 'ok']
         else:
-            return ['Sales, general and administrative expenses to revenue', 'salesGeneralAndAdministrativeToRevenueTTM', 0]
+            return ['Sales, general and administrative expenses to revenue',
+                    'salesGeneralAndAdministrativeToRevenueTTM', 0]
 
     def researchAndDevelopementToRevenueTTM(self, result):
         if (result['researchAndDevelopementToRevenueTTM'] <= 0.1):
@@ -301,4 +310,3 @@ class StockScreeningTable:
             return ['working capital', result['workingCapitalTTM'], 'ok']
         else:
             return ['working capital', result['workingCapitalTTM'], 0]
-
