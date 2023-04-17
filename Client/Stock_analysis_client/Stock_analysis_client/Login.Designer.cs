@@ -36,6 +36,8 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Loginlbl = new System.Windows.Forms.Label();
             this.Loginbt = new System.Windows.Forms.Button();
+            this.SingUpbt = new System.Windows.Forms.Button();
+            this.SignUplbl = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -80,6 +82,7 @@
             this.Usernametb.Name = "Usernametb";
             this.Usernametb.Size = new System.Drawing.Size(100, 26);
             this.Usernametb.TabIndex = 3;
+            this.Usernametb.TextChanged += new System.EventHandler(this.Usernametb_TextChanged);
             // 
             // Passwordtb
             // 
@@ -89,6 +92,7 @@
             this.Passwordtb.Name = "Passwordtb";
             this.Passwordtb.Size = new System.Drawing.Size(100, 26);
             this.Passwordtb.TabIndex = 4;
+            this.Passwordtb.TextChanged += new System.EventHandler(this.Passwordtb_TextChanged);
             // 
             // pictureBox1
             // 
@@ -121,12 +125,34 @@
             this.Loginbt.UseVisualStyleBackColor = false;
             this.Loginbt.Click += new System.EventHandler(this.Loginbt_Click);
             // 
+            // SingUpbt
+            // 
+            this.SingUpbt.BackColor = System.Drawing.SystemColors.Highlight;
+            this.SingUpbt.Location = new System.Drawing.Point(665, 359);
+            this.SingUpbt.Name = "SingUpbt";
+            this.SingUpbt.Size = new System.Drawing.Size(75, 40);
+            this.SingUpbt.TabIndex = 8;
+            this.SingUpbt.UseVisualStyleBackColor = false;
+            this.SingUpbt.Click += new System.EventHandler(this.SingUpbt_Click);
+            // 
+            // SignUplbl
+            // 
+            this.SignUplbl.AutoSize = true;
+            this.SignUplbl.Font = new System.Drawing.Font("Arial Narrow", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.SignUplbl.Location = new System.Drawing.Point(539, 357);
+            this.SignUplbl.Name = "SignUplbl";
+            this.SignUplbl.Size = new System.Drawing.Size(120, 42);
+            this.SignUplbl.TabIndex = 9;
+            this.SignUplbl.Text = "Sign Up";
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Stock_analysis_client.Properties.Resources.BG;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.SignUplbl);
+            this.Controls.Add(this.SingUpbt);
             this.Controls.Add(this.Loginbt);
             this.Controls.Add(this.Loginlbl);
             this.Controls.Add(this.pictureBox1);
@@ -153,5 +179,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label Loginlbl;
         private System.Windows.Forms.Button Loginbt;
+        private System.Windows.Forms.Button SingUpbt;
+        private System.Windows.Forms.Label SignUplbl;
     }
 }
