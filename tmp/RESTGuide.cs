@@ -1,5 +1,9 @@
 
 
+using System;
+using System.Net;
+using System.Text.Json;
+
 using var client = new HttpClient();
 
 
@@ -61,7 +65,7 @@ using var client = new HttpClient();
 //    {
 
 //        { "api_key", "not applicable" },
-//        { "query", "username='bill'" }
+//        { "query", "username='alfonzo'" }
 //    };
 
 //var requestUrl = new UriBuilder("http://localhost:5000/api/users/delete");
@@ -175,5 +179,42 @@ using var client = new HttpClient();
 //Console.WriteLine(res);
 
 
+/*********** DOWNLOAD INCOME STATEMENT **************/
+//var queryString = new System.Collections.Generic.Dictionary<string, string>()
+//{
+//    { "api_key", "07f36a5b1c35e69f0046d0e6a3ab12d6" },
+//    { "ticker", "MSFT" }
+//};
 
+//var requestUrl = new UriBuilder("http://localhost:5000/api/download/income_statement");
+//requestUrl.Query = new System.Net.Http.FormUrlEncodedContent(queryString).ReadAsStringAsync().Result;
+
+//var response = await client.GetAsync(requestUrl.ToString());
+//response.EnsureSuccessStatusCode();
+
+//var json = await response.Content.ReadAsStringAsync();
+//var document = JsonDocument.Parse(json);
+//var uri = document.RootElement.GetProperty("results").ToString();
+
+
+
+
+//string ticker = "MSFT";
+//string statementName = "income_statement";
+//string apiKey = "2b1c52c776217c377aa030db56150115";
+//string homeDir = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
+//string filePath = Path.Combine(homeDir, "Downloads", $"{ticker}_{statementName}.csv");
+
+//Dictionary<string, string> payload = new Dictionary<string, string>();
+//payload["apikey"] = apiKey;
+
+//WebClient cl = new WebClient();
+//cl.QueryString = new System.Collections.Specialized.NameValueCollection();
+//foreach (KeyValuePair<string, string> item in payload)
+//{
+//    cl.QueryString.Add(item.Key, item.Value);
+//}
+
+//string responseString = cl.DownloadString(uri);
+//File.WriteAllText(filePath, responseString);
 
