@@ -37,7 +37,6 @@ namespace Stock_analysis_client
         string searchQuery = txtSearch.Text;
 
         // Perform the search using an external data source or API
-        // In this example, we will just display a message box
         MessageBox.Show("You searched for: " + searchQuery);
 
         // Add the search query and time to the search history
@@ -57,7 +56,7 @@ namespace Stock_analysis_client
         // Create a new Form to display the search history
         SearchHistoryForm historyForm = new SearchHistoryForm();
 
-        // Bind the search history list to the DataGridView control on the Form
+        // Bind the search history list
         historyForm.dgvHistory.DataSource = searchHistory;
 
         // Show the Form as a dialog
