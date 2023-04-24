@@ -43,6 +43,7 @@ namespace Stock_analysis_client
             request.AddParameter("username", Usernametb.Text);
             request.AddParameter("pwd", Passwordtb.Text);
 
+
             RestResponse res = cls.Get(request);
             MessageBox.Show(res.ToString());
 

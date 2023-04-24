@@ -34,7 +34,7 @@ class Host:
                     'status': 400,
                     'message': f"Error! {e}"}
 
-        @self.app.route('/api/users/create')
+        @self.app.route('/api/users/create', methods=["post"])
         def create_user() -> json:
             """
             request arg: string of partial mysql insert into command as follows:
@@ -42,7 +42,13 @@ class Host:
                 sample value: 'alfonzo', md5('pwd'), 'apikey', '0', 'email', 'full name'
             :return: json status info
             """
-            query = request.args.get('query')
+            name = request.args.get('name')
+            pwd = request.args.get('pwd')
+            api_key = request.args.get('api_key')
+            is_admin = request.args.get('is_admin')
+            email = request.args.get('email')
+            full_name = request.args.get('full_name')
+            query = f"'{name}', md5('{pwd}'), '{api_key}', '{is_admin}', '{email}', '{full_name}'"
             try:
                 SQLLoginCRUD.insert(query)
                 return {
