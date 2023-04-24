@@ -58,7 +58,7 @@ namespace Stock_analysis_client
                 else
                 {
                     Response res = cls.Deserialize<Response>(response).Data;
-                    if (res.Status != 0)
+                    if (res.Status != 200)
                     {
                         MessageBox.Show(res.Message);
                     }
