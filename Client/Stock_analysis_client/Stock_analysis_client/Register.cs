@@ -8,11 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
+using RestSharp;
+using System.Collections;
+using System.Xml.Linq;
+using Stock_analysis_client.Properties;
+
 
 namespace Stock_analysis_client
 {
     public partial class Register : Form
     {
+        
+
         public Register()
         {
             InitializeComponent();
@@ -27,27 +34,61 @@ namespace Stock_analysis_client
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (textBox3.Text != textBox4.Text)
+            if (PasswordTb.Text != PasswordAgainTb.Text)
             {
                 MessageBox.Show("A két jelszó nem egyezik", "Jelszó hiba",
                 MessageBoxButtons.OK, MessageBoxIcon.Error);
-                textBox3.Text = "";
-                textBox4.Text = "";
+                PasswordTb.Text = "";
+                PasswordAgainTb.Text = "";
             }
-            else if (!validateEmailRegex.IsMatch(textBox2.Text))
+            else if (!validateEmailRegex.IsMatch(EmailTb.Text))
             {
                 MessageBox.Show("Az E-mail cím hibás formátumú", "E-mail hiba",
                 MessageBoxButtons.OK, MessageBoxIcon.Error);
-                textBox2.Text = "";
+                EmailTb.Text = "";
             }
             else
             {
+                /*********** INSERT **************/
+
+                var queryString = new System.Collections.Generic.Dictionary<string, string>()
+                   {
+                       { "query", "'alfonzo', md5('pwd'), 'apikey', '0', 'email', 'full name'" },
+                   };
+
+
+
+                RestClient cls = new RestClient("http://localhost:5000/api/users/create");
+                RestRequest request = new RestRequest();
+                //request.AddObject("query", queryString);
+                //PasswordTb.Text, 2134214, 0, EmailTb.Text, "My name is" + UsernameTb.Text
+                request.AddParameter("query", "'UsernameTb.Text', md5('PasswordTb.Text'), '2134214', '0', 'EmailTb.Text', 'UsernameTb.Text'");
+                //request.AddObject("query", queryString);
+                
+                //Miután az api register része kész
+                
+                //request.AddParameter("username", UsernameTb.Text);
+                //request.AddParameter("pwd", PasswordTb.Text);
+                //request.AddParameter("api_key", 2134214);
+                //request.AddParameter("is_admin", 0);
+                //request.AddParameter("email", EmailTb.Text);
+                //request.AddParameter("full_name", "My name is " + UsernameTb.Text);
+
+                //'alfonzo', md5('pwd'), 'apikey', '0', 'email', 'full name'
+                RestResponse res = cls.Get(request);
+                MessageBox.Show(res.ToString());
+
+
+                
+
+
+
                 MessageBox.Show("Sikeres regisztráció!", "Sikeres regisztráció",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
                 label1.Text = "Regisztrálva";
-                label2.Text = textBox1.Text;
-                label3.Text = textBox2.Text;
-                label4.Text = textBox3.Text;
+                label2.Text = UsernameTb.Text;
+                label3.Text = EmailTb.Text;
+                label4.Text = PasswordTb.Text;
             }
 
         }
@@ -55,6 +96,12 @@ namespace Stock_analysis_client
         private void Register_FormClosing(object sender, FormClosingEventArgs e)
         {
             Login.GetInstance().Show();
+        }
+
+        private void backBtn_Click(object sender, EventArgs e)
+        {
+            Login.GetInstance().Show();
+            Hide();
         }
     }
 }
