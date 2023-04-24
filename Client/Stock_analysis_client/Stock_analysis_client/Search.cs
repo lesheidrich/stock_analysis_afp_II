@@ -37,7 +37,6 @@ namespace Stock_analysis_client
         string searchQuery = txtSearch.Text;
 
         // Perform the search using an external data source or API
-        // In this example, we will just display a message box
         MessageBox.Show("You searched for: " + searchQuery);
 
         // Add the search query and time to the search history
