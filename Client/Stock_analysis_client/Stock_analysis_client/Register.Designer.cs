@@ -30,10 +30,10 @@
         {
             this.SingUplbl = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.UsernameTb = new System.Windows.Forms.TextBox();
+            this.EmailTb = new System.Windows.Forms.TextBox();
+            this.PasswordTb = new System.Windows.Forms.TextBox();
+            this.PasswordAgainTb = new System.Windows.Forms.TextBox();
             this.UserNamelbl = new System.Windows.Forms.Label();
             this.Emaillbl = new System.Windows.Forms.Label();
             this.Passwordlbl = new System.Windows.Forms.Label();
@@ -44,6 +44,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.backBtn = new System.Windows.Forms.Button();
+            this.backLbl = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -61,48 +63,48 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.SystemColors.Highlight;
-            this.button1.Location = new System.Drawing.Point(545, 381);
+            this.button1.Location = new System.Drawing.Point(492, 381);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 40);
             this.button1.TabIndex = 1;
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox1
+            // UsernameTb
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.Highlight;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBox1.Location = new System.Drawing.Point(178, 207);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(174, 26);
-            this.textBox1.TabIndex = 2;
+            this.UsernameTb.BackColor = System.Drawing.SystemColors.Highlight;
+            this.UsernameTb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.UsernameTb.Location = new System.Drawing.Point(178, 207);
+            this.UsernameTb.Name = "UsernameTb";
+            this.UsernameTb.Size = new System.Drawing.Size(174, 26);
+            this.UsernameTb.TabIndex = 2;
             // 
-            // textBox2
+            // EmailTb
             // 
-            this.textBox2.BackColor = System.Drawing.SystemColors.Highlight;
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBox2.Location = new System.Drawing.Point(178, 260);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(174, 26);
-            this.textBox2.TabIndex = 3;
+            this.EmailTb.BackColor = System.Drawing.SystemColors.Highlight;
+            this.EmailTb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.EmailTb.Location = new System.Drawing.Point(178, 260);
+            this.EmailTb.Name = "EmailTb";
+            this.EmailTb.Size = new System.Drawing.Size(174, 26);
+            this.EmailTb.TabIndex = 3;
             // 
-            // textBox3
+            // PasswordTb
             // 
-            this.textBox3.BackColor = System.Drawing.SystemColors.Highlight;
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBox3.Location = new System.Drawing.Point(178, 313);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(174, 26);
-            this.textBox3.TabIndex = 4;
+            this.PasswordTb.BackColor = System.Drawing.SystemColors.Highlight;
+            this.PasswordTb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.PasswordTb.Location = new System.Drawing.Point(178, 313);
+            this.PasswordTb.Name = "PasswordTb";
+            this.PasswordTb.Size = new System.Drawing.Size(174, 26);
+            this.PasswordTb.TabIndex = 4;
             // 
-            // textBox4
+            // PasswordAgainTb
             // 
-            this.textBox4.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBox4.Location = new System.Drawing.Point(178, 360);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(174, 26);
-            this.textBox4.TabIndex = 5;
+            this.PasswordAgainTb.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.PasswordAgainTb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.PasswordAgainTb.Location = new System.Drawing.Point(178, 360);
+            this.PasswordAgainTb.Name = "PasswordAgainTb";
+            this.PasswordAgainTb.Size = new System.Drawing.Size(174, 26);
+            this.PasswordAgainTb.TabIndex = 5;
             // 
             // UserNamelbl
             // 
@@ -151,7 +153,7 @@
             // 
             this.SignUpButtonlbl.AutoSize = true;
             this.SignUpButtonlbl.Font = new System.Drawing.Font("Arial", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.SignUpButtonlbl.Location = new System.Drawing.Point(400, 381);
+            this.SignUpButtonlbl.Location = new System.Drawing.Point(358, 381);
             this.SignUpButtonlbl.Name = "SignUpButtonlbl";
             this.SignUpButtonlbl.Size = new System.Drawing.Size(139, 40);
             this.SignUpButtonlbl.TabIndex = 13;
@@ -212,6 +214,26 @@
             this.label4.TabIndex = 18;
             this.label4.Text = "label4";
             // 
+            // backBtn
+            // 
+            this.backBtn.BackColor = System.Drawing.SystemColors.Highlight;
+            this.backBtn.Location = new System.Drawing.Point(713, 381);
+            this.backBtn.Name = "backBtn";
+            this.backBtn.Size = new System.Drawing.Size(75, 40);
+            this.backBtn.TabIndex = 19;
+            this.backBtn.UseVisualStyleBackColor = false;
+            this.backBtn.Click += new System.EventHandler(this.backBtn_Click);
+            // 
+            // backLbl
+            // 
+            this.backLbl.AutoSize = true;
+            this.backLbl.Font = new System.Drawing.Font("Arial", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.backLbl.Location = new System.Drawing.Point(613, 381);
+            this.backLbl.Name = "backLbl";
+            this.backLbl.Size = new System.Drawing.Size(94, 40);
+            this.backLbl.TabIndex = 20;
+            this.backLbl.Text = "Back";
+            // 
             // Register
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -219,6 +241,8 @@
             this.BackgroundImage = global::Stock_analysis_client.Properties.Resources.BG;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.backLbl);
+            this.Controls.Add(this.backBtn);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -229,10 +253,10 @@
             this.Controls.Add(this.Passwordlbl);
             this.Controls.Add(this.Emaillbl);
             this.Controls.Add(this.UserNamelbl);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.PasswordAgainTb);
+            this.Controls.Add(this.PasswordTb);
+            this.Controls.Add(this.EmailTb);
+            this.Controls.Add(this.UsernameTb);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.SingUplbl);
             this.DoubleBuffered = true;
@@ -249,10 +273,10 @@
 
         private System.Windows.Forms.Label SingUplbl;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox UsernameTb;
+        private System.Windows.Forms.TextBox EmailTb;
+        private System.Windows.Forms.TextBox PasswordTb;
+        private System.Windows.Forms.TextBox PasswordAgainTb;
         private System.Windows.Forms.Label UserNamelbl;
         private System.Windows.Forms.Label Emaillbl;
         private System.Windows.Forms.Label Passwordlbl;
@@ -263,5 +287,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button backBtn;
+        private System.Windows.Forms.Label backLbl;
     }
 }

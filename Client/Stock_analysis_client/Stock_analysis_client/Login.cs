@@ -48,6 +48,9 @@ namespace Stock_analysis_client
             // RestResponse res = cls.Get(request);
             // MessageBox.Show(res.ToString());
 
+            RestResponse res = cls.Get(request);
+            MessageBox.Show(res.ToString());
+
             try
             {
                 RestResponse response = cls.Get(request);
