@@ -28,4 +28,39 @@ namespace Stock_analysis_client
             throw new NotImplementedException();
         }
     }
+
+    List<SearchHistoryItem> searchHistory = new List<SearchHistoryItem>();
+
+    private void btnSearch_Click(object sender, EventArgs e)
+    {
+        // Get the search query from the TextBox control
+        string searchQuery = txtSearch.Text;
+
+        // Perform the search using an external data source or API
+        // In this example, we will just display a message box
+        MessageBox.Show("You searched for: " + searchQuery);
+
+        // Add the search query and time to the search history
+        SearchHistoryItem searchItem = new SearchHistoryItem
+        {
+            SearchQuery = searchQuery,
+            SearchTime = DateTime.Now
+        };
+        searchHistory.Add(searchItem);
+
+        // Clear the search query from the TextBox control
+        txtSearch.Clear();
+    }
+
+    private void btnViewHistory_Click(object sender, EventArgs e)
+    {
+        // Create a new Form to display the search history
+        SearchHistoryForm historyForm = new SearchHistoryForm();
+
+        // Bind the search history list to the DataGridView control on the Form
+        historyForm.dgvHistory.DataSource = searchHistory;
+
+        // Show the Form as a dialog
+        historyForm.ShowDialog();
+    }
 }
