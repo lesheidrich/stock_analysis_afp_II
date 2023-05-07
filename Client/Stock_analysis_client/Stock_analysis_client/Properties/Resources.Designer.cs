@@ -73,6 +73,16 @@ namespace Stock_analysis_client.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap BlueGlobeBg {
+            get {
+                object obj = ResourceManager.GetObject("BlueGlobeBg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap GoldenStock {
             get {
                 object obj = ResourceManager.GetObject("GoldenStock", resourceCulture);

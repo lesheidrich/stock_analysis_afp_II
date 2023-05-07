@@ -23,10 +23,6 @@ namespace Stock_analysis_client
         public Register()
         {
             InitializeComponent();
-            label1.Text = " ";
-            label2.Text = " ";
-            label3.Text = " ";
-            label4.Text = " ";
         }
 
         Regex validateEmailRegex = new Regex("^\\S+@\\S+\\.\\S+$");
@@ -49,46 +45,50 @@ namespace Stock_analysis_client
             }
             else
             {
-                /*********** INSERT **************/
-
-                var queryString = new System.Collections.Generic.Dictionary<string, string>()
-                   {
-                       { "query", "'alfonzo', md5('pwd'), 'apikey', '0', 'email', 'full name'" },
-                   };
-
 
 
                 RestClient cls = new RestClient("http://localhost:5000/api/users/create");
                 RestRequest request = new RestRequest();
-                //request.AddObject("query", queryString);
-                //PasswordTb.Text, 2134214, 0, EmailTb.Text, "My name is" + UsernameTb.Text
-                request.AddParameter("query", "'UsernameTb.Text', md5('PasswordTb.Text'), '2134214', '0', 'EmailTb.Text', 'UsernameTb.Text'");
-                //request.AddObject("query", queryString);
-                
-                //Miután az api register része kész
-                
-                //request.AddParameter("username", UsernameTb.Text);
-                //request.AddParameter("pwd", PasswordTb.Text);
-                //request.AddParameter("api_key", 2134214);
-                //request.AddParameter("is_admin", 0);
-                //request.AddParameter("email", EmailTb.Text);
-                //request.AddParameter("full_name", "My name is " + UsernameTb.Text);
 
-                //'alfonzo', md5('pwd'), 'apikey', '0', 'email', 'full name'
-                RestResponse res = cls.Get(request);
+                request.AddQueryParameter("name", UsernameTb.Text);
+                request.AddQueryParameter("pwd", PasswordTb.Text);
+                request.AddQueryParameter("api_key", ApiKeyTB.Text);
+                request.AddQueryParameter("is_admin", 0);
+                request.AddQueryParameter("email", EmailTb.Text);
+                request.AddQueryParameter("full_name", "My name is " + UsernameTb.Text);
+
+                RestResponse res = cls.Post(request);
                 MessageBox.Show(res.ToString());
+                try
+                {
+                    RestResponse response = cls.Post(request);
+                    if (response.StatusCode != System.Net.HttpStatusCode.OK)
+                    {
+                        MessageBox.Show(response.StatusDescription);
+                    }
+                    else
+                    {
+                        Response res2 = cls.Deserialize<Response>(response).Data;
+                        if (res2.Error == 0)
+                        {
+                            MessageBox.Show("Sikeres regisztráció!", "Sikeres regisztráció",
+                            MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        
+                    }
+                }
+                catch (DeserializationException)
+                {
+                    MessageBox.Show("Deserialization error", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Unknown error", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
 
 
-                
-
-
-
-                MessageBox.Show("Sikeres regisztráció!", "Sikeres regisztráció",
-                MessageBoxButtons.OK, MessageBoxIcon.Information);
-                label1.Text = "Regisztrálva";
-                label2.Text = UsernameTb.Text;
-                label3.Text = EmailTb.Text;
-                label4.Text = PasswordTb.Text;
+                Login.GetInstance().Show();
+                Hide();
             }
 
         }
@@ -103,5 +103,7 @@ namespace Stock_analysis_client
             Login.GetInstance().Show();
             Hide();
         }
+
+
     }
 }

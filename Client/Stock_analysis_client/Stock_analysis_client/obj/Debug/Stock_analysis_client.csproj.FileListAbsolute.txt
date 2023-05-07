@@ -56,16 +56,6 @@ D:\xhwjpv\stock_analysis_afp_II\Client\Stock_analysis_client\Stock_analysis_clie
 D:\git\stock_analysis_afp_II\Client\Stock_analysis_client\Stock_analysis_client\bin\Debug\Stock_analysis_client.exe.config
 D:\git\stock_analysis_afp_II\Client\Stock_analysis_client\Stock_analysis_client\bin\Debug\Stock_analysis_client.exe
 D:\git\stock_analysis_afp_II\Client\Stock_analysis_client\Stock_analysis_client\bin\Debug\Stock_analysis_client.pdb
-D:\git\stock_analysis_afp_II\Client\Stock_analysis_client\Stock_analysis_client\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
-D:\git\stock_analysis_afp_II\Client\Stock_analysis_client\Stock_analysis_client\bin\Debug\RestSharp.dll
-D:\git\stock_analysis_afp_II\Client\Stock_analysis_client\Stock_analysis_client\bin\Debug\System.Buffers.dll
-D:\git\stock_analysis_afp_II\Client\Stock_analysis_client\Stock_analysis_client\bin\Debug\System.Memory.dll
-D:\git\stock_analysis_afp_II\Client\Stock_analysis_client\Stock_analysis_client\bin\Debug\System.Numerics.Vectors.dll
-D:\git\stock_analysis_afp_II\Client\Stock_analysis_client\Stock_analysis_client\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
-D:\git\stock_analysis_afp_II\Client\Stock_analysis_client\Stock_analysis_client\bin\Debug\System.Text.Encodings.Web.dll
-D:\git\stock_analysis_afp_II\Client\Stock_analysis_client\Stock_analysis_client\bin\Debug\System.Text.Json.dll
-D:\git\stock_analysis_afp_II\Client\Stock_analysis_client\Stock_analysis_client\bin\Debug\System.Threading.Tasks.Extensions.dll
-D:\git\stock_analysis_afp_II\Client\Stock_analysis_client\Stock_analysis_client\bin\Debug\System.ValueTuple.dll
 D:\git\stock_analysis_afp_II\Client\Stock_analysis_client\Stock_analysis_client\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
 D:\git\stock_analysis_afp_II\Client\Stock_analysis_client\Stock_analysis_client\bin\Debug\RestSharp.xml
 D:\git\stock_analysis_afp_II\Client\Stock_analysis_client\Stock_analysis_client\bin\Debug\System.Buffers.xml
@@ -119,3 +109,4 @@ C:\Users\User\Desktop\git\stock_analysis_afp_II\Client\Stock_analysis_client\Sto
 C:\Users\User\Desktop\git\stock_analysis_afp_II\Client\Stock_analysis_client\Stock_analysis_client\obj\Debug\Stock_analysis_client.csproj.CopyComplete
 C:\Users\User\Desktop\git\stock_analysis_afp_II\Client\Stock_analysis_client\Stock_analysis_client\obj\Debug\Stock_analysis_client.exe
 C:\Users\User\Desktop\git\stock_analysis_afp_II\Client\Stock_analysis_client\Stock_analysis_client\obj\Debug\Stock_analysis_client.pdb
+D:\git\stock_analysis_afp_II\Client\Stock_analysis_client\Stock_analysis_client\obj\Debug\Stock_analysis_client.Profile.resources
