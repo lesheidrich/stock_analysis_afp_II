@@ -50,7 +50,6 @@
             this.SignInlbl.Size = new System.Drawing.Size(121, 46);
             this.SignInlbl.TabIndex = 0;
             this.SignInlbl.Text = "Sign In";
-            this.SignInlbl.Click += new System.EventHandler(this.label1_Click);
             // 
             // Usernamelbl
             // 
@@ -82,7 +81,6 @@
             this.Usernametb.Name = "Usernametb";
             this.Usernametb.Size = new System.Drawing.Size(100, 26);
             this.Usernametb.TabIndex = 3;
-            this.Usernametb.TextChanged += new System.EventHandler(this.Usernametb_TextChanged);
             // 
             // Passwordtb
             // 
@@ -92,7 +90,6 @@
             this.Passwordtb.Name = "Passwordtb";
             this.Passwordtb.Size = new System.Drawing.Size(100, 26);
             this.Passwordtb.TabIndex = 4;
-            this.Passwordtb.TextChanged += new System.EventHandler(this.Passwordtb_TextChanged);
             // 
             // pictureBox1
             // 
