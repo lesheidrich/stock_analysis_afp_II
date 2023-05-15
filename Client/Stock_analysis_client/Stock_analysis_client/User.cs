@@ -34,6 +34,14 @@ namespace Stock_analysis_client
             set { password = value; }
         }
 
+        private string email;
+
+        public string Email
+        {
+            get { return email; }
+            set { email = value; }
+        }
+
         private int isAdmin;
         public int IsAdmin
         {
@@ -47,6 +55,14 @@ namespace Stock_analysis_client
         {
             get { return api_key; }
             set { api_key = value; }
+        }
+
+        private string mynameis;
+
+        public string Mynameis
+        {
+            get { return mynameis; }
+            set { mynameis = value; }
         }
 
     }

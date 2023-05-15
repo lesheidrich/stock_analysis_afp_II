@@ -8,6 +8,15 @@ namespace Stock_analysis_client
 {
     public class Response
     {
+        private int error;
+
+        public int Error
+        {
+            get { return error; }
+            set { error = value; }
+        }
+
+
         private int status;
 
         public int Status
