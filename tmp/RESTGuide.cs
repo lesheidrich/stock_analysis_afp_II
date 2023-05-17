@@ -8,20 +8,20 @@ using var client = new HttpClient();
 
 
 /*********** LOGIN **************/
-//var queryString = new System.Collections.Generic.Dictionary<string, string>()
-//    {
-//        { "username", "jenna" },
-//        { "pwd", "pwd" }
-//    };
+var queryString = new System.Collections.Generic.Dictionary<string, string>()
+   {
+       { "username", "jenna" },
+       { "pwd", "pwd" }
+   };
 
-//var requestUrl = new UriBuilder("http://localhost:5000/api/users/login");
-//requestUrl.Query = new System.Net.Http.FormUrlEncodedContent(queryString).ReadAsStringAsync().Result;
+var requestUrl = new UriBuilder("http://localhost:5000/api/users/login");
+requestUrl.Query = new System.Net.Http.FormUrlEncodedContent(queryString).ReadAsStringAsync().Result;
 
-//var response = await client.GetAsync(requestUrl.ToString());
-//response.EnsureSuccessStatusCode();
+var response = await client.GetAsync(requestUrl.ToString());
+response.EnsureSuccessStatusCode();
 
-//var res = await response.Content.ReadAsStringAsync();
-//Console.WriteLine(res);
+var res = await response.Content.ReadAsStringAsync();
+Console.WriteLine(res);
 
 
 
