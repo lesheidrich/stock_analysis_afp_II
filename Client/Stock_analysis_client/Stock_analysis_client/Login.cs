@@ -45,9 +45,6 @@ namespace Stock_analysis_client
             request.AddParameter("username", Usernametb.Text);
             request.AddParameter("pwd", Passwordtb.Text);
 
-            // RestResponse res = cls.Get(request);
-            // MessageBox.Show(res.ToString());
-
             RestResponse res = cls.Get(request);
             MessageBox.Show(res.ToString());
 
@@ -72,6 +69,10 @@ namespace Stock_analysis_client
                             Username = Usernametb.Text,
                             Password = Passwordtb.Text
                         };
+
+                        var apiKey = res2.Id.ToString();
+                        Console.WriteLine(apiKey);
+                        MessageBox.Show(apiKey);
 
                         new Main(this).Show();
                         this.Hide();

@@ -49,9 +49,9 @@ namespace Stock_analysis_client
             set { isAdmin = value; }
         }
 
-        private int api_key;
+        private string api_key;
 
-        public int API_Key
+        public string API_Key
         {
             get { return api_key; }
             set { api_key = value; }
