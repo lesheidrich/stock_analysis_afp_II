@@ -8,12 +8,12 @@ namespace Stock_analysis_client
 {
     public class Response
     {
-        private int error;
+        private bool success;
 
-        public int Error
+        public bool Success
         {
-            get { return error; }
-            set { error = value; }
+            get { return success; }
+            set { success = value; }
         }
 
 
@@ -33,6 +33,15 @@ namespace Stock_analysis_client
             get { return message; }
             set { message = value; }
         }
+
+        private string api_key;
+
+        public string API_Key
+        {
+            get { return api_key; }
+            set { api_key = value; }
+        }
+
 
 
         private List<User> users;

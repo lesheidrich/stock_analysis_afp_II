@@ -57,12 +57,12 @@ namespace Stock_analysis_client
             set { api_key = value; }
         }
 
-        private string mynameis;
+        private string user_name;
 
-        public string Mynameis
+        public string User_Name
         {
-            get { return mynameis; }
-            set { mynameis = value; }
+            get { return user_name; }
+            set { user_name = value; }
         }
 
     }

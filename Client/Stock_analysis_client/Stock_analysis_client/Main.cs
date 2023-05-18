@@ -18,9 +18,17 @@ namespace Stock_analysis_client
             InitializeComponent();
             this.apiKey = apiKey;
             this.login = login;
-            sparta.Text = apiKey;
+            if (apiKey is null)
+            {
+                label1.Text = "null";
+            }
             label1.Text = "fuck you";
         }
         private Login login;
+
+        private void sparta_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

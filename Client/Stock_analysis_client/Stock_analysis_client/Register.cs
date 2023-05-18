@@ -78,7 +78,7 @@ namespace Stock_analysis_client
                     else
                     {
                         Response res2 = cls.Deserialize<Response>(response).Data;
-                        if (res2.Error == 0)
+                        if (res2.Success == 0)
                         {
                             MessageBox.Show("Sikeres regisztráció!", "Sikeres regisztráció",
                             MessageBoxButtons.OK, MessageBoxIcon.Information);

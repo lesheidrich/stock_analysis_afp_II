@@ -40,6 +40,7 @@
             this.sparta.Size = new System.Drawing.Size(44, 16);
             this.sparta.TabIndex = 0;
             this.sparta.Text = "label1";
+            this.sparta.Click += new System.EventHandler(this.sparta_Click);
             // 
             // label1
             // 

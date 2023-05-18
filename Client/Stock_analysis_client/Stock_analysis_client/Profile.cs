@@ -21,7 +21,7 @@ namespace Stock_analysis_client
             EMailGetLbl.Text = u.Email;
             passwordGetLbl.Text = u.Password;
             ApiKeyGetLbl.Text = Convert.ToString(u.API_Key);
-            myNameIsLbl.Text = u.Mynameis;
+            myNameIsLbl.Text = u.User_Name;
         }
 
 
