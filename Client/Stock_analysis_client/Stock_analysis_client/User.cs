@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -26,12 +26,12 @@ namespace Stock_analysis_client
         }
 
 
-        private string password;
+        private string pwd;
 
-        public string Password
+        public string Pwd
         {
-            get { return password; }
-            set { password = value; }
+            get { return pwd; }
+            set { pwd = value; }
         }
 
         private int isAdmin;
@@ -41,13 +41,28 @@ namespace Stock_analysis_client
             set { isAdmin = value; }
         }
 
-        private int api_key;
+        private string api_key;
 
-        public int API_Key
+        public string API_Key
         {
             get { return api_key; }
             set { api_key = value; }
         }
 
+        private int email;
+
+        public int Email
+        {
+            get { return email; }
+            set { email = value; }
+        }
+
+        private int full_name;
+
+        public int Full_Name
+        {
+            get { return full_name; }
+            set { full_name = value; }
+        }
     }
 }
