@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,7 +15,8 @@ namespace Stock_analysis_client
 {
     public partial class Login : Form
     {
-        HttpClient client = new HttpClient();
+        //HttpClient client = new HttpClient();
+        RestClient loginClient = new RestClient("http://localhost:5000/api/users/login");
 
         private static Login instance;
         public static Login GetInstance()
@@ -32,51 +33,44 @@ namespace Stock_analysis_client
             InitializeComponent();
         }
 
-        public void ClearInput()
+        public void ClearContents()
         {
-            Usernametb.Text = "";
-            Passwordtb.Text = "";
+            Usernametb.Clear();
+            Passwordtb.Clear();
+            Usernametb.Focus();
         }
 
         private void SignIn()
         {
-            RestClient cls = new RestClient("http://localhost:5000/api/users/login");
             RestRequest request = new RestRequest();
             request.AddParameter("username", Usernametb.Text);
             request.AddParameter("pwd", Passwordtb.Text);
 
-            // RestResponse res = cls.Get(request);
-            // MessageBox.Show(res.ToString());
-
-            RestResponse res = cls.Get(request);
-            MessageBox.Show(res.ToString());
+            //RestResponse res = cls.Get(request);
+            //MessageBox.Show(res.ToString());
 
             try
             {
-                RestResponse response = cls.Get(request);
+                RestResponse response = loginClient.Get(request);
                 if (response.StatusCode != System.Net.HttpStatusCode.OK)
                 {
                     MessageBox.Show(response.StatusDescription);
                 }
                 else
                 {
-                    Response res = cls.Deserialize<Response>(response).Data;
-                    if (res.Status != 200)
+                    Response res = loginClient.Deserialize<Response>(response).Data;
+                    if (res.Success != 200)
                     {
                         MessageBox.Show(res.Message);
                     }
                     else
                     {
-                        User u = new User()
-                        {
-                            Username = Usernametb.Text,
-                            Password = Passwordtb.Text
-                        };
-
-                        new Main(this).Show();
+                        Main mainView = new Main(this, Usernametb.Text, Passwordtb.Text, res.API_Key);
+                        mainView.Show();
+                      
                         this.Hide();
-                        ClearInput();
                     }
+                    ClearContents();
                 }
             }
             catch (DeserializationException)
@@ -106,5 +100,6 @@ namespace Stock_analysis_client
            new Register().Show();
             Hide();
         }
+
     }
 }
