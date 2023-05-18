@@ -7,6 +7,7 @@ using System.Linq;
 using System.Net.Http;
 using System.Runtime.Serialization;
 using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using RestSharp;
@@ -15,6 +16,7 @@ namespace Stock_analysis_client
 {
     public partial class Login : Form
     {
+        string thisisspartaaa;
         //HttpClient client = new HttpClient();
         RestClient loginClient = new RestClient("http://localhost:5000/api/users/login");
         public Login()
@@ -31,7 +33,32 @@ namespace Stock_analysis_client
 
 
 
+        public async void spartaaaa()
+        {
+            var client = new HttpClient();
 
+            var queryString = new Dictionary<string, string>()
+            {
+                { "username", "jenna" },
+                { "pwd", "pwd" }
+            };
+
+            var requestUrl = new UriBuilder("http://localhost:5000/api/users/login");
+            requestUrl.Query = new FormUrlEncodedContent(queryString).ReadAsStringAsync().Result;
+
+            var response = await client.GetAsync(requestUrl.ToString());
+            response.EnsureSuccessStatusCode();
+
+            var jsonResponse = await response.Content.ReadAsStringAsync();
+
+            using (var document = JsonDocument.Parse(jsonResponse))
+            {
+                var root = document.RootElement;
+                var apiKey = root.GetProperty("api_key").GetString();
+
+                thisisspartaaa =  apiKey;
+            }
+        }
 
 
 
@@ -77,17 +104,17 @@ namespace Stock_analysis_client
                     }
                     else
                     {
-                        User u = new User()
-                        {
-                            Username = Usernametb.Text,
-                            Password = Passwordtb.Text
-                        };
+                        //User u = new User()
+                        //{
+                        //    Username = Usernametb.Text,
+                        //    Password = Passwordtb.Text
+                        //};
 
-                        var apiKey = res2.Id.ToString();
-                        Console.WriteLine(apiKey);
-                        MessageBox.Show(apiKey);
+                        //var apiKey = res2.Id.ToString();
+                        //Console.WriteLine(apiKey);
+                        //MessageBox.Show(apiKey);
 
-                        new Main(this).Show();
+                        new Main(this, thisisspartaaa).Show();
                         this.Hide();
                         ClearContents();
                     }

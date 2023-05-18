@@ -12,10 +12,14 @@ namespace Stock_analysis_client
 {
     public partial class Main : Form
     {
-        public Main(Login login)
+        private string apiKey;
+        public Main(Login login, string apiKey)
         {
             InitializeComponent();
+            this.apiKey = apiKey;
             this.login = login;
+            sparta.Text = apiKey;
+            label1.Text = "fuck you";
         }
         private Login login;
     }
