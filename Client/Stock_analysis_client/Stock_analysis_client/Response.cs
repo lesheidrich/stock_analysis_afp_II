@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,12 +8,12 @@ namespace Stock_analysis_client
 {
     public class Response
     {
-        private int status;
+        private int success;
 
-        public int Status
+        public int Success
         {
-            get { return status; }
-            set { status = value; }
+            get { return success; }
+            set { success = value; }
         }
 
 
@@ -50,12 +50,12 @@ namespace Stock_analysis_client
             set { isAdmin = value; }
         }
 
-        private int apikey;
+        private string api_key;
 
-        public int APIKey
+        public string API_Key
         {
-            get { return apikey; }
-            set { apikey = value; }
+            get { return api_key; }
+            set { api_key = value; }
         }
 
     }
