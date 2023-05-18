@@ -1,5 +1,5 @@
 import unittest
-from business_logic.fmp_merger import FMPMerger
+from fmp_merger import FMPMerger
 
 
 class FMPapiTest(unittest.TestCase):

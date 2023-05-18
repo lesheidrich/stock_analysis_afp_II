@@ -1,5 +1,5 @@
 import unittest
-from business_logic.fmp_api import FMPapi
+from fmp_api import FMPapi
 
 
 class FMPapiTest(unittest.TestCase):

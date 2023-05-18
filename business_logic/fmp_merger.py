@@ -1,5 +1,5 @@
 import json
-from business_logic.fmp_api import FMPapi
+from fmp_api import FMPapi
 
 
 class FMPMerger(FMPapi):

@@ -1,6 +1,6 @@
 import json
 import mysql.connector
-from business_logic.fmp_merger import FMPMerger
+from fmp_merger import FMPMerger
 
 
 class SQLOperator(FMPMerger):

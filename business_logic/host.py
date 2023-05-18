@@ -2,9 +2,9 @@ import json
 import datetime
 from dateutil.relativedelta import relativedelta
 from flask import Flask, request, jsonify
-from business_logic import sql_operator
-from business_logic.fmp_api import FMPapi
-from business_logic.sql_login import SQLLoginCRUD
+import sql_operator
+from fmp_api import FMPapi
+from sql_login import SQLLoginCRUD
 
 
 class Host:
