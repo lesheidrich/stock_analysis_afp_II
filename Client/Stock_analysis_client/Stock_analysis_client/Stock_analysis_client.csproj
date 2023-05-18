@@ -180,6 +180,8 @@
     <Content Include="Resources\BG.png" />
     <Content Include="Resources\BlueGlobeBg.png" />
     <Content Include="Resources\GoldenStock.png" />
+    <None Include="Resources\visible_blue.png" />
+    <None Include="Resources\userblue.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="bin\Release\" />

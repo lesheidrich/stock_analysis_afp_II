@@ -15,7 +15,26 @@ namespace Stock_analysis_client
 {
     public partial class Login : Form
     {
-        HttpClient client = new HttpClient();
+        //HttpClient client = new HttpClient();
+        RestClient loginClient = new RestClient("http://localhost:5000/api/users/login");
+        public Login()
+        {
+            InitializeComponent();
+        }
+
+        public void ClearContents()
+        {
+            Usernametb.Clear();
+            Passwordtb.Clear();
+            Usernametb.Focus();
+        }
+
+
+
+
+
+
+
 
         private static Login instance;
         public static Login GetInstance()
@@ -27,37 +46,31 @@ namespace Stock_analysis_client
             return instance;
         }
 
-        private Login()
+        private void Loginbt_Click(object sender, EventArgs e)
         {
-            InitializeComponent();
-        }
-
-        public void ClearInput()
-        {
-            Usernametb.Text = "";
-            Passwordtb.Text = "";
+            SignIn();
         }
 
         private void SignIn()
         {
-            RestClient cls = new RestClient("http://localhost:5000/api/users/login");
+            //RestClient cls = new RestClient("http://localhost:5000/api/users/login");
             RestRequest request = new RestRequest();
             request.AddParameter("username", Usernametb.Text);
             request.AddParameter("pwd", Passwordtb.Text);
 
-            RestResponse res = cls.Get(request);
+            RestResponse res = loginClient.Get(request);
             MessageBox.Show(res.ToString());
 
             try
             {
-                RestResponse response = cls.Get(request);
+                RestResponse response = loginClient.Get(request);
                 if (response.StatusCode != System.Net.HttpStatusCode.OK)
                 {
                     MessageBox.Show(response.StatusDescription);
                 }
                 else
                 {
-                    Response res2 = cls.Deserialize<Response>(response).Data;
+                    Response res2 = loginClient.Deserialize<Response>(response).Data;
                     if (res2.Status != 200)
                     {
                         MessageBox.Show(res2.Message);
@@ -76,7 +89,7 @@ namespace Stock_analysis_client
 
                         new Main(this).Show();
                         this.Hide();
-                        ClearInput();
+                        ClearContents();
                     }
                 }
             }
@@ -90,10 +103,7 @@ namespace Stock_analysis_client
             }
         }
 
-        private void Loginbt_Click(object sender, EventArgs e)
-        {
-            SignIn();
-        }
+
         private void EnterPressed(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
@@ -106,6 +116,23 @@ namespace Stock_analysis_client
         {
            new Register().Show();
             Hide();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            if (Passwordtb.PasswordChar == '*')
+            {
+                Passwordtb.PasswordChar = '\0';
+            }
+            else
+            {
+                Passwordtb.PasswordChar = '*';
+            }
         }
     }
 }
