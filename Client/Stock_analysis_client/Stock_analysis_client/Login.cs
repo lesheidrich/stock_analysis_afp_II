@@ -94,14 +94,14 @@ namespace Stock_analysis_client
                 if (response.StatusCode != System.Net.HttpStatusCode.OK)
                 {
                     MessageBox.Show(response.StatusDescription);
-                    thisisspartaaa = "1";
+                    //thisisspartaaa = "1";
                 }
                 else
                 {
                     Response res2 = loginClient.Deserialize<Response>(response).Data;
                     if (res2.Status != 200)
                     {
-                        thisisspartaaa = "2";
+                        //thisisspartaaa = "2";
                     }
                     else
                     {
@@ -114,9 +114,9 @@ namespace Stock_analysis_client
                         //var apiKey = res2.Id.ToString();
                         //Console.WriteLine(apiKey);
                         //MessageBox.Show(apiKey);
-                        thisisspartaaa = "3";
+                        //thisisspartaaa = "3";
 
-                        new Main(this, thisisspartaaa).Show();
+                        new Main(this, res2.API_Key).Show();
                         this.Hide();
                         ClearContents();
                     }

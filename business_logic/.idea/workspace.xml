@@ -5,14 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1c045b40-7900-4a03-92bf-8c890893dae8" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../Client/Stock_analysis_client/Stock_analysis_client/Login.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/Stock_analysis_client/Stock_analysis_client/Login.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/Stock_analysis_client/Stock_analysis_client/Main.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/Stock_analysis_client/Stock_analysis_client/Main.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/Stock_analysis_client/Stock_analysis_client/Main.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/Stock_analysis_client/Stock_analysis_client/Main.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/Stock_analysis_client/Stock_analysis_client/Profile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/Stock_analysis_client/Stock_analysis_client/Profile.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/Stock_analysis_client/Stock_analysis_client/Register.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/Stock_analysis_client/Stock_analysis_client/Register.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/Stock_analysis_client/Stock_analysis_client/Response.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/Stock_analysis_client/Stock_analysis_client/Response.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/Stock_analysis_client/Stock_analysis_client/User.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/Stock_analysis_client/Stock_analysis_client/User.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/Stock_analysis_client/Stock_analysis_client/obj/Debug/Stock_analysis_client.csproj.GenerateResource.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/Stock_analysis_client/Stock_analysis_client/obj/Debug/Stock_analysis_client.csproj.GenerateResource.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

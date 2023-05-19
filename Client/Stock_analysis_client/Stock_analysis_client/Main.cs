@@ -22,7 +22,8 @@ namespace Stock_analysis_client
             {
                 label1.Text = "null";
             }
-            label1.Text = "fuck you";
+            sparta.Text = apiKey;
+            //label1.Text = "fuck you";
         }
         private Login login;
 

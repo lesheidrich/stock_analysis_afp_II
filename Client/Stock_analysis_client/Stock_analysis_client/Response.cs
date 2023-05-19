@@ -68,13 +68,13 @@ namespace Stock_analysis_client
             set { isAdmin = value; }
         }
 
-        private string apikey;
+        //private string apikey;
 
-        public string APIKey
-        {
-            get { return apikey; }
-            set { apikey = value; }
-        }
+        //public string APIKey
+        //{
+        //    get { return apikey; }
+        //    set { apikey = value; }
+        //}
 
     }
 }
