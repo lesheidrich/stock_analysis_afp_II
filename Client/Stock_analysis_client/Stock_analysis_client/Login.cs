@@ -16,8 +16,6 @@ namespace Stock_analysis_client
 {
     public partial class Login : Form
     {
-        string thisisspartaaa;
-        //HttpClient client = new HttpClient();
         RestClient loginClient = new RestClient("http://localhost:5000/api/users/login");
         public Login()
         {
@@ -30,37 +28,6 @@ namespace Stock_analysis_client
             Passwordtb.Clear();
             Usernametb.Focus();
         }
-
-
-
-        //public async void spartaaaa()
-        //{
-        //    var client = new HttpClient();
-
-        //    var queryString = new Dictionary<string, string>()
-        //    {
-        //        { "username", "jenna" },
-        //        { "pwd", "pwd" }
-        //    };
-
-        //    var requestUrl = new UriBuilder("http://localhost:5000/api/users/login");
-        //    requestUrl.Query = new FormUrlEncodedContent(queryString).ReadAsStringAsync().Result;
-
-        //    var response = await client.GetAsync(requestUrl.ToString());
-        //    response.EnsureSuccessStatusCode();
-
-        //    var jsonResponse = await response.Content.ReadAsStringAsync();
-
-        //    using (var document = JsonDocument.Parse(jsonResponse))
-        //    {
-        //        var root = document.RootElement;
-        //        var apiKey = root.GetProperty("api_key").GetString();
-
-        //        thisisspartaaa =  apiKey;
-        //    }
-        //}
-
-
 
 
         private static Login instance;
@@ -80,13 +47,10 @@ namespace Stock_analysis_client
 
         private void SignIn()
         {
-            //RestClient cls = new RestClient("http://localhost:5000/api/users/login");
             RestRequest request = new RestRequest();
             request.AddParameter("username", Usernametb.Text);
             request.AddParameter("pwd", Passwordtb.Text);
 
-            //RestResponse res = loginClient.Get(request);
-            //MessageBox.Show(res.ToString());
 
             try
             {
@@ -94,29 +58,22 @@ namespace Stock_analysis_client
                 if (response.StatusCode != System.Net.HttpStatusCode.OK)
                 {
                     MessageBox.Show(response.StatusDescription);
-                    //thisisspartaaa = "1";
                 }
                 else
                 {
-                    Response res2 = loginClient.Deserialize<Response>(response).Data;
-                    if (res2.Status != 200)
+                    Response res = loginClient.Deserialize<Response>(response).Data;
+                    if (res.Status != 200)
                     {
-                        //thisisspartaaa = "2";
+                        MessageBox.Show(res.Message);   
                     }
                     else
                     {
-                        //User u = new User()
-                        //{
-                        //    Username = Usernametb.Text,
-                        //    Password = Passwordtb.Text
-                        //};
-
-                        //var apiKey = res2.Id.ToString();
-                        //Console.WriteLine(apiKey);
-                        //MessageBox.Show(apiKey);
-                        //thisisspartaaa = "3";
-
-                        new Main(this, res2.API_Key).Show();
+                        User user = new User()
+                        { 
+                            Username = Usernametb.Text,
+                            Password = Passwordtb.Text
+                        };
+                        new Main(this, user).Show();
                         this.Hide();
                         ClearContents();
                     }
