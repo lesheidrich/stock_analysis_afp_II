@@ -28,8 +28,8 @@ namespace Stock_analysis_client
             {
                 apikeylb.Text = "null";
             }
-            usernamelb.Text = "Welcome {0}!" + user.Username;
-            apikeylb.Text = "Your API key: {0}" + apiKey;
+            usernamelb.Text = $"Welcome {user.Username}";
+            apikeylb.Text = $"Your API key: {apiKey}";
         }
         private Login login;
         private string apiKey;
