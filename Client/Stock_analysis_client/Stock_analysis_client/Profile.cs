@@ -14,16 +14,18 @@ namespace Stock_analysis_client
 {
     public partial class Profile : Form
     {
-        public Profile(User u)
+        public Profile(Main main, User u)
         {
             InitializeComponent();
+            this.main = main;
             userNameGetLbl.Text = u.Username;
             EMailGetLbl.Text = u.Email;
             passwordGetLbl.Text = u.Password;
-            ApiKeyGetLbl.Text = Convert.ToString(u.API_Key);
+            ApiKeyGetLbl.Text = u.API_Key;
             myNameIsLbl.Text = u.User_Name;
         }
 
+        private Main main;
 
 
         private void SignOutBtn_Click(object sender, EventArgs e)
