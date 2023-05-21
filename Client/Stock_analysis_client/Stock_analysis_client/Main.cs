@@ -36,6 +36,7 @@ namespace Stock_analysis_client
         private User user;
 
 
+
         public void InitializeNewsDG()
         {
             newsdg.Columns.Add("content", "content");

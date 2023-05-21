@@ -109,6 +109,7 @@ namespace Stock_analysis_client
                     }
                     else
                     {
+
                         Response res2 = cls.Deserialize<Response>(response).Data;
                         if (res2.Success)
                         {

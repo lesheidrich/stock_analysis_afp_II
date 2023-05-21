@@ -88,7 +88,7 @@
             // 
             this.PasswordLbl.AutoSize = true;
             this.PasswordLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.PasswordLbl.Location = new System.Drawing.Point(396, 98);
+            this.PasswordLbl.Location = new System.Drawing.Point(396, 63);
             this.PasswordLbl.Name = "PasswordLbl";
             this.PasswordLbl.Size = new System.Drawing.Size(112, 25);
             this.PasswordLbl.TabIndex = 4;
@@ -98,7 +98,7 @@
             // 
             this.ApiKeyLbl.AutoSize = true;
             this.ApiKeyLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.ApiKeyLbl.Location = new System.Drawing.Point(396, 140);
+            this.ApiKeyLbl.Location = new System.Drawing.Point(396, 107);
             this.ApiKeyLbl.Name = "ApiKeyLbl";
             this.ApiKeyLbl.Size = new System.Drawing.Size(86, 25);
             this.ApiKeyLbl.TabIndex = 5;
@@ -128,7 +128,7 @@
             // 
             this.passwordGetLbl.AutoSize = true;
             this.passwordGetLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.passwordGetLbl.Location = new System.Drawing.Point(581, 98);
+            this.passwordGetLbl.Location = new System.Drawing.Point(581, 63);
             this.passwordGetLbl.Name = "passwordGetLbl";
             this.passwordGetLbl.Size = new System.Drawing.Size(104, 25);
             this.passwordGetLbl.TabIndex = 8;
@@ -138,7 +138,7 @@
             // 
             this.ApiKeyGetLbl.AutoSize = true;
             this.ApiKeyGetLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.ApiKeyGetLbl.Location = new System.Drawing.Point(581, 140);
+            this.ApiKeyGetLbl.Location = new System.Drawing.Point(581, 107);
             this.ApiKeyGetLbl.Name = "ApiKeyGetLbl";
             this.ApiKeyGetLbl.Size = new System.Drawing.Size(75, 25);
             this.ApiKeyGetLbl.TabIndex = 9;
@@ -169,9 +169,9 @@
             this.SignOutLbl.Font = new System.Drawing.Font("Arial", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.SignOutLbl.Location = new System.Drawing.Point(93, 408);
             this.SignOutLbl.Name = "SignOutLbl";
-            this.SignOutLbl.Size = new System.Drawing.Size(151, 40);
+            this.SignOutLbl.Size = new System.Drawing.Size(94, 40);
             this.SignOutLbl.TabIndex = 26;
-            this.SignOutLbl.Text = "Sign Out";
+            this.SignOutLbl.Text = "Back";
             // 
             // SignOutBtn
             // 
