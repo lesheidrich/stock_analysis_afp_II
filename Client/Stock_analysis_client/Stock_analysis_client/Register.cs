@@ -25,7 +25,29 @@ namespace Stock_analysis_client
             InitializeComponent();
         }
 
-        Regex validateEmailRegex = new Regex("^\\S+@\\S+\\.\\S+$");
+        public bool TextboxIsEmpty(string text)
+        {
+            if (text == "")
+            {
+                return true;
+            }
+            return false;
+        }
+
+        public bool ValidateEmail(string email)
+        {
+            Regex validateEmailRegex = new Regex("^\\S+@\\S+\\.\\S+$");
+            if (validateEmailRegex.IsMatch(email))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        
         
 
         public bool PwEqual(string a, string b)
@@ -39,14 +61,21 @@ namespace Stock_analysis_client
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (PasswordTb.Text != PasswordAgainTb.Text)
+            if ((TextboxIsEmpty(UsernameTb.Text) || TextboxIsEmpty(EmailTb.Text) ||
+                TextboxIsEmpty(PasswordTb.Text) || TextboxIsEmpty(PasswordAgainTb.Text)
+                || TextboxIsEmpty(ApiKeyTB.Text)))
+            {
+                MessageBox.Show("Minegyik mezőt ki kell tölteni", "Kitöltés hiba",
+                MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (!PwEqual(PasswordTb.Text, PasswordAgainTb.Text))
             {
                 MessageBox.Show("A két jelszó nem egyezik", "Jelszó hiba",
                 MessageBoxButtons.OK, MessageBoxIcon.Error);
                 PasswordTb.Text = "";
                 PasswordAgainTb.Text = "";
             }
-            else if (!validateEmailRegex.IsMatch(EmailTb.Text))
+            else if (!ValidateEmail(EmailTb.Text))
             {
                 MessageBox.Show("Az E-mail cím hibás formátumú", "E-mail hiba",
                 MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -67,6 +96,9 @@ namespace Stock_analysis_client
                 request.AddQueryParameter("full_name", "My name is " + UsernameTb.Text);
 
                 RestResponse res = cls.Post(request);
+
+                MessageBox.Show("Sikeres regisztráció!", "Sikeres regisztráció", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                 MessageBox.Show(res.ToString());
                 try
                 {

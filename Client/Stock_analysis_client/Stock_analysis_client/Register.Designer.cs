@@ -92,6 +92,7 @@
             this.PasswordTb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.PasswordTb.Location = new System.Drawing.Point(178, 313);
             this.PasswordTb.Name = "PasswordTb";
+            this.PasswordTb.PasswordChar = '*';
             this.PasswordTb.Size = new System.Drawing.Size(174, 26);
             this.PasswordTb.TabIndex = 4;
             // 
@@ -101,6 +102,7 @@
             this.PasswordAgainTb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.PasswordAgainTb.Location = new System.Drawing.Point(178, 360);
             this.PasswordAgainTb.Name = "PasswordAgainTb";
+            this.PasswordAgainTb.PasswordChar = '*';
             this.PasswordAgainTb.Size = new System.Drawing.Size(174, 26);
             this.PasswordAgainTb.TabIndex = 5;
             // 
