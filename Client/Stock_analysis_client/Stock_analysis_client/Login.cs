@@ -40,6 +40,27 @@ namespace Stock_analysis_client
             return instance;
         }
 
+        public bool TextBoxIsEmpty(string text)
+        {
+            if (text == "") { return true; }
+            return false;
+        }
+
+        public bool TextBoxLenght(string text)
+        {
+            if (text.Length > 20) { return true; }
+            return false;
+        }
+
+        public bool TextBoxStartsWith(string text)
+        {
+            if (text.StartsWith(".")) 
+            { 
+                return true;
+            }
+            return false;
+        }
+
         private void Loginbt_Click(object sender, EventArgs e)
         {
             SignIn();
@@ -47,6 +68,22 @@ namespace Stock_analysis_client
 
         private void SignIn()
         {
+            if (TextBoxIsEmpty(Usernametb.Text) || TextBoxIsEmpty(Passwordtb.Text))
+            {
+                MessageBox.Show("Minegyik mezőt ki kell tölteni!", "Kitöltés hiba!",
+                MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (TextBoxLenght(Usernametb.Text) || TextBoxLenght(Passwordtb.Text)) 
+            {
+                MessageBox.Show("A mezőkbe maximum 20 karaktert lehet írni!", "Kitöltés hiba!",
+                MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (TextBoxStartsWith(Usernametb.Text))
+            {
+                MessageBox.Show("A felhasználónév nem kezdődhet ponttal!", "Kitöltés hiba!",
+                MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
             RestRequest request = new RestRequest();
             request.AddParameter("username", Usernametb.Text);
             request.AddParameter("pwd", Passwordtb.Text);
@@ -72,12 +109,7 @@ namespace Stock_analysis_client
                         {
                             Username = Usernametb.Text,
                             Password = Passwordtb.Text,
-                            API_Key = res.API_Key,
-                            //Email = res.Users[0].Email,
-                            //Id = res.Id,
-                            //Email = res.Users[1].Email,
-                            //IsAdmin = res.Users[1].IsAdmin,
-                            //User_Name = res.Users[1].User_Name,
+                            API_Key = res.API_Key
 
                         };
                         new Main(this, user).Show();

@@ -189,3 +189,5 @@ C:\Users\dblin\GitHub\stock_analysis_afp_II\Client\Stock_analysis_client\Stock_a
 C:\Users\dblin\GitHub\stock_analysis_afp_II\Client\Stock_analysis_client\Stock_analysis_client\obj\Debug\Stock_analysis_client.pdb
 C:\Users\dblin\GitHub\stock_analysis_afp_II\Client\Stock_analysis_client\Stock_analysis_client\obj\Debug\Stock_analysis_client.Main.resources
 C:\Users\User\Documents\GitHub\stock_analysis_afp_II\Client\Stock_analysis_client\Stock_analysis_client\obj\Debug\Stock_analysis_client.Main.resources
+D:\xhwjpv\stock_analysis_afp_II\Client\Stock_analysis_client\Stock_analysis_client\obj\Debug\Stock_analysis_client.Main.resources
+D:\xhwjpv\stock_analysis_afp_II\Client\Stock_analysis_client\Stock_analysis_client\obj\Debug\Stock_analysis_client.Profile.resources
