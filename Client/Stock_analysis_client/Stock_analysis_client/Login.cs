@@ -69,9 +69,16 @@ namespace Stock_analysis_client
                     else
                     {
                         User user = new User()
-                        { 
+                        {
                             Username = Usernametb.Text,
-                            Password = Passwordtb.Text
+                            Password = Passwordtb.Text,
+                            API_Key = res.API_Key,
+                            //Email = res.Users[0].Email,
+                            //Id = res.Id,
+                            //Email = res.Users[1].Email,
+                            //IsAdmin = res.Users[1].IsAdmin,
+                            //User_Name = res.Users[1].User_Name,
+
                         };
                         new Main(this, user).Show();
                         this.Hide();

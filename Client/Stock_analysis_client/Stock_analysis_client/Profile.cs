@@ -22,7 +22,7 @@ namespace Stock_analysis_client
             EMailGetLbl.Text = u.Email;
             passwordGetLbl.Text = u.Password;
             ApiKeyGetLbl.Text = u.API_Key;
-            myNameIsLbl.Text = u.User_Name;
+            myNameIsLbl.Text = "Hello, my name is " + u.Username;
         }
 
         private Main main;
@@ -30,7 +30,7 @@ namespace Stock_analysis_client
 
         private void SignOutBtn_Click(object sender, EventArgs e)
         {
-            Login.GetInstance().Show();
+            //Login.GetInstance().Show();
             Hide();
         }
 
